@@ -1,0 +1,90 @@
+---
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/space-grotesk/500.css';
+import '@fontsource/space-grotesk/700.css';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Javier Steven Franco Ospina — Full-Stack Developer',
+  description = 'Full-Stack Developer con +8 años de experiencia en Angular, Node.js, TypeScript, MongoDB y AWS. Construyendo aplicaciones web y móviles escalables.',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://jsfranco.dev');
+const ogImage = new URL('/og-image.png', 'https://jsfranco.dev');
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Javier Steven Franco Ospina" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="alternate icon" href="/favicon.ico" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Javier Steven Franco Ospina',
+      jobTitle: 'Full-Stack Developer',
+      url: 'https://jsfranco.dev',
+      sameAs: ['https://www.linkedin.com/in/jsfranco-dev'],
+      knowsAbout: ['Angular', 'Node.js', 'TypeScript', 'MongoDB', 'AWS', 'Firebase'],
+    })} />
+  </head>
+  <body>
+    <slot />
+    <script>
+      const revealEls = document.querySelectorAll('.reveal');
+
+      const supportsScrollTimeline =
+        typeof CSS !== 'undefined' && CSS.supports && CSS.supports('animation-timeline: view()');
+
+      if (!supportsScrollTimeline && revealEls.length) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                io.unobserve(entry.target);
+              }
+            }
+          },
+          { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+        );
+
+        revealEls.forEach((el) => io.observe(el));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+---
+const projects = [
+  {
+    title: 'Proyecto Próximamente',
+    tag: 'Web App',
+    description: 'Un nuevo caso de estudio está en camino. Vuelve pronto para ver los detalles.',
+  },
+  {
+    title: 'Proyecto Próximamente',
+    tag: 'Mobile App',
+    description: 'Explorando Swift y Kotlin en una nueva aplicación móvil nativa.',
+  },
+  {
+    title: 'Proyecto Próximamente',
+    tag: 'Cloud / AWS',
+    description: 'Una arquitectura cloud-first, documentada de principio a fin.',
+  },
+];
+---
+
+<section id="projects" class="mx-auto max-w-6xl px-6 py-28 sm:py-36">
+  <div class="reveal" style="--stagger: 0">
+    <span class="font-display text-sm tracking-[0.3em] text-electric uppercase">Proyectos</span>
+    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+      Trabajo seleccionado
+    </h2>
+    <p class="mt-4 max-w-xl text-muted">
+      Estoy preparando estudios de caso detallados de mis proyectos recientes. Mientras tanto,
+      aquí tienes un adelanto de lo que viene.
+    </p>
+  </div>
+
+  <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      projects.map((project, i) => (
+        <article
+          class="reveal-scale group relative overflow-hidden rounded-2xl border border-border bg-surface"
+          style={`--stagger: ${i + 1}`}
+        >
+          <div class="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-electric/15 via-transparent to-mint/15">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:24px_24px]" />
+            <svg
+              class="relative h-12 w-12 text-muted/60 transition-transform duration-500 group-hover:scale-110"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="p-6">
+            <span class="font-display text-xs tracking-[0.2em] text-mint uppercase">
+              {project.tag}
+            </span>
+            <h3 class="mt-2 font-display text-lg font-semibold text-text">{project.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">{project.description}</p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: #0a0a0a;
+  --color-bg-soft: #111214;
+  --color-surface: #15161a;
+  --color-border: #232428;
+  --color-text: #f2f2f0;
+  --color-muted: #9a9ba3;
+  --color-electric: #3b82f6;
+  --color-mint: #34d399;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-electric);
+  color: #0a0a0a;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-electric);
+}
+
+.text-gradient {
+  background-image: linear-gradient(100deg, var(--color-electric), var(--color-mint));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Scroll-reveal system ---------- */
+/* Default state: hidden, ready to animate in as the element enters the viewport. */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  will-change: opacity, transform;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.94) translateY(20px);
+  will-change: opacity, transform;
+}
+
+@keyframes reveal-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-in-scale {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Native scroll-driven animations where supported. */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+    animation-delay: calc(var(--stagger, 0) * 90ms);
+  }
+
+  .reveal-scale {
+    animation: reveal-in-scale linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    animation-delay: calc(var(--stagger, 0) * 90ms);
+  }
+}
+
+/* Fallback for browsers without scroll-timeline support: IntersectionObserver + transitions. */
+@supports not (animation-timeline: view()) {
+  .reveal,
+  .reveal-scale {
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: calc(var(--stagger, 0) * 90ms);
+  }
+
+  .reveal.in-view,
+  .reveal-scale.in-view {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hero load-in animation (not scroll-linked). */
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-in {
+  animation: hero-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--stagger, 0) * 120ms);
+}
+
+/* Subtle scroll parallax on the hero background glow. */
+@supports (animation-timeline: scroll()) {
+  .hero-parallax {
+    animation: hero-parallax-out linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 90vh;
+  }
+}
+
+@keyframes hero-parallax-out {
+  to {
+    transform: translateY(10%) scale(1.08);
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-scale,
+  .hero-in,
+  .hero-parallax {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

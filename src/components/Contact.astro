@@ -1,0 +1,117 @@
+---
+const email = 'javierfranco0904@gmail.com';
+const linkedin = 'https://www.linkedin.com/in/jsfranco-dev';
+---
+
+<section id="contact" class="mx-auto max-w-5xl px-6 py-28 sm:py-36">
+  <div class="reveal" style="--stagger: 0">
+    <span class="font-display text-sm tracking-[0.3em] text-electric uppercase">Contacto</span>
+    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+      Construyamos algo juntos
+    </h2>
+    <p class="mt-4 max-w-xl text-muted">
+      ¿Tienes un proyecto en mente o una oportunidad para colaborar? Escríbeme, siempre estoy
+      abierto a nuevas conversaciones.
+    </p>
+  </div>
+
+  <div class="mt-14 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]">
+    <div class="reveal flex flex-col gap-4" style="--stagger: 1">
+      <a
+        href={`mailto:${email}`}
+        class="group flex items-center justify-between rounded-2xl border border-border bg-surface px-6 py-5 transition-colors duration-300 hover:border-electric/60"
+      >
+        <div>
+          <p class="text-xs tracking-[0.2em] text-muted uppercase">Email</p>
+          <p class="mt-1 font-medium text-text">{email}</p>
+        </div>
+        <span class="text-muted transition-transform duration-300 group-hover:translate-x-1 group-hover:text-electric">
+          →
+        </span>
+      </a>
+
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group flex items-center justify-between rounded-2xl border border-border bg-surface px-6 py-5 transition-colors duration-300 hover:border-electric/60"
+      >
+        <div>
+          <p class="text-xs tracking-[0.2em] text-muted uppercase">LinkedIn</p>
+          <p class="mt-1 font-medium text-text">jsfranco-dev</p>
+        </div>
+        <span class="text-muted transition-transform duration-300 group-hover:translate-x-1 group-hover:text-electric">
+          →
+        </span>
+      </a>
+
+      <div
+        class="flex items-center justify-between rounded-2xl border border-dashed border-border px-6 py-5 opacity-60"
+      >
+        <div>
+          <p class="text-xs tracking-[0.2em] text-muted uppercase">GitHub</p>
+          <p class="mt-1 font-medium text-text">Próximamente</p>
+        </div>
+      </div>
+    </div>
+
+    <form id="contact-form" class="reveal flex flex-col gap-5" style="--stagger: 2">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <label class="flex flex-col gap-2 text-sm text-muted">
+          Nombre
+          <input
+            type="text"
+            name="name"
+            required
+            class="rounded-xl border border-border bg-surface px-4 py-3 text-text outline-none transition-colors duration-300 placeholder:text-muted/50 focus:border-electric"
+            placeholder="Tu nombre"
+          />
+        </label>
+        <label class="flex flex-col gap-2 text-sm text-muted">
+          Email
+          <input
+            type="email"
+            name="email"
+            required
+            class="rounded-xl border border-border bg-surface px-4 py-3 text-text outline-none transition-colors duration-300 placeholder:text-muted/50 focus:border-electric"
+            placeholder="tu@email.com"
+          />
+        </label>
+      </div>
+
+      <label class="flex flex-col gap-2 text-sm text-muted">
+        Mensaje
+        <textarea
+          name="message"
+          rows="5"
+          required
+          class="resize-none rounded-xl border border-border bg-surface px-4 py-3 text-text outline-none transition-colors duration-300 placeholder:text-muted/50 focus:border-electric"
+          placeholder="Cuéntame sobre tu proyecto..."
+        ></textarea>
+      </label>
+
+      <button
+        type="submit"
+        class="self-start rounded-full bg-text px-8 py-3 text-sm font-medium text-bg transition-transform duration-300 hover:scale-105"
+      >
+        Enviar mensaje
+      </button>
+
+      <p id="form-status" class="hidden text-sm text-mint" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const status = document.getElementById('form-status');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (status) {
+      status.textContent = '¡Gracias por escribir! Este formulario es una demo — usa el email directo mientras se conecta el envío.';
+      status.classList.remove('hidden');
+    }
+    form.reset();
+  });
+</script>

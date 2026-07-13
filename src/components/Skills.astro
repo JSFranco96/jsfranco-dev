@@ -1,0 +1,59 @@
+---
+const core = [
+  { label: 'Angular', mark: 'A' },
+  { label: 'Node.js', mark: 'N' },
+  { label: 'TypeScript', mark: 'TS' },
+  { label: 'MongoDB', mark: 'M' },
+  { label: 'AWS', mark: 'AWS' },
+  { label: 'Firebase', mark: 'F' },
+];
+
+const learning = [
+  { label: 'Swift', mark: 'S' },
+  { label: 'Kotlin', mark: 'K' },
+];
+---
+
+<section id="skills" class="mx-auto max-w-6xl px-6 py-28 sm:py-36">
+  <div class="reveal" style="--stagger: 0">
+    <span class="font-display text-sm tracking-[0.3em] text-electric uppercase">Skills</span>
+    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+      Tecnologías con las que trabajo
+    </h2>
+  </div>
+
+  <div class="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
+    {
+      core.map((skill, i) => (
+        <div
+          class="reveal group flex flex-col items-center gap-4 rounded-2xl border border-border bg-surface px-4 py-8 text-center transition-colors duration-300 hover:border-electric/60"
+          style={`--stagger: ${i + 1}`}
+        >
+          <span class="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-electric/20 to-mint/20 font-display text-lg font-bold text-gradient transition-transform duration-300 group-hover:scale-110">
+            {skill.mark}
+          </span>
+          <span class="text-sm font-medium text-text">{skill.label}</span>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="reveal mt-16 flex flex-col items-center gap-5 text-center" style="--stagger: 7">
+    <span class="font-display text-xs tracking-[0.25em] text-muted uppercase">
+      Incursionando en desarrollo móvil nativo
+    </span>
+    <div class="flex flex-wrap justify-center gap-4">
+      {
+        learning.map((skill) => (
+          <div class="flex items-center gap-3 rounded-full border border-dashed border-border px-5 py-2.5">
+            <span class="font-display text-sm font-bold text-mint">{skill.mark}</span>
+            <span class="text-sm text-muted">{skill.label}</span>
+            <span class="rounded-full bg-mint/10 px-2 py-0.5 text-[10px] tracking-wide text-mint uppercase">
+              En aprendizaje
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
