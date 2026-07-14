@@ -97,21 +97,26 @@ body {
   }
 }
 
-/* Fallback for browsers without scroll-timeline support: IntersectionObserver + transitions. */
-@supports not (animation-timeline: view()) {
-  .reveal,
-  .reveal-scale {
-    transition:
-      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    transition-delay: calc(var(--stagger, 0) * 90ms);
-  }
+/*
+ * IntersectionObserver-driven safety net, always active (not gated behind
+ * @supports). Mobile browsers can report `animation-timeline: view()` as
+ * supported via CSS.supports while still failing to animate reliably once
+ * the dynamic URL bar resizes the real viewport during scroll, which left
+ * whole sections stuck at opacity: 0. This runs unconditionally so content
+ * always ends up visible, on top of the native animation where it works.
+ */
+.reveal,
+.reveal-scale {
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--stagger, 0) * 90ms);
+}
 
-  .reveal.in-view,
-  .reveal-scale.in-view {
-    opacity: 1;
-    transform: none;
-  }
+.reveal.in-view,
+.reveal-scale.in-view {
+  opacity: 1;
+  transform: none;
 }
 
 /* Hero load-in animation (not scroll-linked). */

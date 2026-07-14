@@ -65,12 +65,13 @@ const ogImage = new URL('/og-image.png', 'https://jsfranco.dev');
   <body>
     <slot />
     <script>
-      const revealEls = document.querySelectorAll('.reveal');
+      // Always run this, regardless of `CSS.supports('animation-timeline: view()')`.
+      // Some mobile browsers report support but still fail to animate once the
+      // dynamic URL bar resizes the real viewport mid-scroll, leaving sections
+      // stuck invisible. This acts as a safety net on top of the native animation.
+      const revealEls = document.querySelectorAll('.reveal, .reveal-scale');
 
-      const supportsScrollTimeline =
-        typeof CSS !== 'undefined' && CSS.supports && CSS.supports('animation-timeline: view()');
-
-      if (!supportsScrollTimeline && revealEls.length) {
+      if (revealEls.length) {
         const io = new IntersectionObserver(
           (entries) => {
             for (const entry of entries) {
@@ -80,7 +81,7 @@ const ogImage = new URL('/og-image.png', 'https://jsfranco.dev');
               }
             }
           },
-          { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+          { threshold: 0.1, rootMargin: '0px 0px -5% 0px' }
         );
 
         revealEls.forEach((el) => io.observe(el));
