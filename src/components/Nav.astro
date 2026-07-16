@@ -1,14 +1,17 @@
 ---
+import ThemeToggle from './ThemeToggle.astro';
+import LangToggle from './LangToggle.astro';
+
 const links = [
-  { href: '#about', label: 'Sobre mí' },
-  { href: '#experience', label: 'Experiencia' },
-  { href: '#projects', label: 'Proyectos' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#contact', label: 'Contacto' },
+  { href: '#about', key: 'nav.about', label: 'Sobre mí' },
+  { href: '#experience', key: 'nav.experience', label: 'Experiencia' },
+  { href: '#projects', key: 'nav.projects', label: 'Proyectos' },
+  { href: '#skills', key: 'nav.skills', label: 'Skills' },
+  { href: '#contact', key: 'nav.contact', label: 'Contacto' },
 ];
 ---
 
-<header class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-[#0a0a0a]/70 backdrop-blur-md">
+<header class="fixed inset-x-0 top-0 z-50 border-b border-border bg-bg/70 backdrop-blur-md">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
     <a href="#top" class="font-display text-lg font-bold tracking-tight text-text">
       JS<span class="text-gradient">Franco</span>
@@ -21,6 +24,7 @@ const links = [
             <a
               href={link.href}
               class="text-sm text-muted transition-colors duration-300 hover:text-text"
+              data-i18n={link.key}
             >
               {link.label}
             </a>
@@ -29,21 +33,29 @@ const links = [
       }
     </ul>
 
-    <button
-      id="menu-toggle"
-      aria-label="Abrir menú"
-      aria-expanded="false"
-      class="flex flex-col gap-1.5 p-2 md:hidden"
-    >
-      <span class="h-px w-6 bg-text transition-transform duration-300"></span>
-      <span class="h-px w-6 bg-text transition-opacity duration-300"></span>
-      <span class="h-px w-6 bg-text transition-transform duration-300"></span>
-    </button>
+    <div class="flex items-center gap-2">
+      <div class="hidden items-center gap-2 md:flex">
+        <LangToggle />
+        <ThemeToggle />
+      </div>
+
+      <button
+        id="menu-toggle"
+        aria-label="Abrir menú"
+        data-i18n-aria-label="nav.menuOpenLabel"
+        aria-expanded="false"
+        class="flex flex-col gap-1.5 p-2 md:hidden"
+      >
+        <span class="h-px w-6 bg-text transition-transform duration-300"></span>
+        <span class="h-px w-6 bg-text transition-opacity duration-300"></span>
+        <span class="h-px w-6 bg-text transition-transform duration-300"></span>
+      </button>
+    </div>
   </nav>
 
   <ul
     id="mobile-menu"
-    class="hidden flex-col gap-1 border-t border-white/5 bg-[#0a0a0a]/95 px-6 py-4 md:hidden"
+    class="hidden flex-col gap-1 border-t border-border bg-bg/95 px-6 py-4 md:hidden"
   >
     {
       links.map((link) => (
@@ -51,12 +63,17 @@ const links = [
           <a
             href={link.href}
             class="block rounded-md px-2 py-3 text-sm text-muted transition-colors duration-300 hover:text-text"
+            data-i18n={link.key}
           >
             {link.label}
           </a>
         </li>
       ))
     }
+    <li class="mt-2 flex items-center gap-2 px-2 pt-3">
+      <LangToggle />
+      <ThemeToggle />
+    </li>
   </ul>
 </header>
 

@@ -14,9 +14,39 @@
   --color-mint: #34d399;
 }
 
+/*
+ * Theme tokens are plain CSS custom properties (not just @theme values), so
+ * overriding them under [data-theme="light"] cascades through every Tailwind
+ * utility that references them (bg-bg, text-muted, border-border, etc.)
+ * without needing separate light/dark utility classes anywhere else.
+ */
+:root {
+  --grid-line: rgba(255, 255, 255, 0.035);
+  --grid-line-soft: rgba(255, 255, 255, 0.05);
+  --color-on-accent: #0a0a0a;
+}
+
+:root[data-theme='light'] {
+  --color-bg: #fafafa;
+  --color-bg-soft: #f1f1f3;
+  --color-surface: #ffffff;
+  --color-border: #e2e2e6;
+  --color-text: #131417;
+  --color-muted: #5c5d66;
+  --color-electric: #2563eb;
+  --color-mint: #047857;
+  --color-on-accent: #ffffff;
+  --grid-line: rgba(10, 10, 10, 0.045);
+  --grid-line-soft: rgba(10, 10, 10, 0.06);
+}
+
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
 }
 
 body {
@@ -26,9 +56,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Smooth color swap when toggling theme, without touching transform/opacity
+   (those are owned by the scroll-reveal and hover-interaction transitions). */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    fill 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+
 ::selection {
   background: var(--color-electric);
-  color: #0a0a0a;
+  color: var(--color-on-accent);
 }
 
 ::-webkit-scrollbar {
@@ -43,6 +93,17 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-electric);
+}
+
+/* Theme toggle icon swap: show the icon for the action the click performs. */
+[data-icon-for] {
+  display: none;
+}
+:root[data-theme='dark'] [data-icon-for='dark'] {
+  display: inline-flex;
+}
+:root[data-theme='light'] [data-icon-for='light'] {
+  display: inline-flex;
 }
 
 .text-gradient {

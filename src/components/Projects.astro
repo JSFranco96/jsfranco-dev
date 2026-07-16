@@ -20,11 +20,11 @@ const projects = [
 
 <section id="projects" class="mx-auto max-w-6xl px-6 py-28 sm:py-36">
   <div class="reveal" style="--stagger: 0">
-    <span class="font-display text-sm tracking-[0.3em] text-electric uppercase">Proyectos</span>
-    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+    <span class="font-display text-sm tracking-[0.3em] text-electric uppercase" data-i18n="projects.eyebrow">Proyectos</span>
+    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl" data-i18n="projects.title">
       Trabajo seleccionado
     </h2>
-    <p class="mt-4 max-w-xl text-muted">
+    <p class="mt-4 max-w-xl text-muted" data-i18n="projects.intro">
       Estoy preparando estudios de caso detallados de mis proyectos recientes. Mientras tanto,
       aquí tienes un adelanto de lo que viene.
     </p>
@@ -38,7 +38,7 @@ const projects = [
           style={`--stagger: ${i + 1}`}
         >
           <div class="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-electric/15 via-transparent to-mint/15">
-            <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:24px_24px]" />
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-line-soft)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line-soft)_1px,transparent_1px)] bg-[size:24px_24px]" />
             <svg
               class="relative h-12 w-12 text-muted/60 transition-transform duration-500 group-hover:scale-110"
               viewBox="0 0 24 24"
@@ -51,11 +51,11 @@ const projects = [
           </div>
 
           <div class="p-6">
-            <span class="font-display text-xs tracking-[0.2em] text-mint uppercase">
+            <span class="font-display text-xs tracking-[0.2em] text-mint uppercase" data-i18n={`projects.items.${i}.tag`}>
               {project.tag}
             </span>
-            <h3 class="mt-2 font-display text-lg font-semibold text-text">{project.title}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted">{project.description}</p>
+            <h3 class="mt-2 font-display text-lg font-semibold text-text" data-i18n={`projects.items.${i}.title`}>{project.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted" data-i18n={`projects.items.${i}.description`}>{project.description}</p>
           </div>
         </article>
       ))
