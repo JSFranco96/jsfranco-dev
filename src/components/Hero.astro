@@ -1,60 +1,61 @@
-<section
-  id="top"
-  class="relative flex min-h-screen items-center overflow-hidden px-6 pt-24"
->
-  <div class="hero-parallax pointer-events-none absolute inset-0 -z-10">
-    <div
-      class="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-electric/25 blur-[110px]"
-    >
-    </div>
-    <div
-      class="absolute right-[-6rem] bottom-[-4rem] h-[28rem] w-[28rem] rounded-full bg-mint/15 blur-[130px]"
-    >
-    </div>
-    <div
-      class="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_0%,#000_10%,transparent_75%)]"
-    >
+<section id="top" class="relative flex min-h-screen overflow-hidden border-b-2 border-border pt-20">
+  <div class="hidden w-16 shrink-0 items-end justify-center overflow-hidden border-r-2 border-border pb-14 md:flex lg:w-20">
+    <div class="hero-parallax hero-in" style="--stagger: 0">
+      <span
+        class="font-mono text-sm font-medium tracking-[0.3em] text-muted uppercase"
+        style="writing-mode: vertical-rl; transform: rotate(180deg);"
+        data-i18n="hero.eyebrow"
+      >
+        Full-Stack Developer
+      </span>
     </div>
   </div>
 
-  <div class="mx-auto max-w-4xl">
-    <p
-      class="hero-in font-display text-sm tracking-[0.3em] text-mint uppercase"
+  <div class="flex max-w-7xl flex-1 flex-col justify-center gap-9 px-6 py-24 sm:px-12">
+    <span
+      class="hero-in font-mono text-sm font-medium tracking-[0.3em] text-muted uppercase md:hidden"
       style="--stagger: 0"
       data-i18n="hero.eyebrow"
     >
       Full-Stack Developer
-    </p>
+    </span>
 
     <h1
-      class="hero-in mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl"
+      class="hero-in text-6xl leading-[0.96] font-black tracking-tight sm:text-7xl lg:text-8xl 2xl:text-9xl"
       style="--stagger: 1"
     >
-      Javier Steven<br />
-      <span class="text-gradient">Franco Ospina</span>
+      Javier Steven<br />Franco Ospina
     </h1>
 
-    <p
-      class="hero-in mt-6 max-w-2xl text-lg text-muted sm:text-xl"
-      style="--stagger: 2"
-      data-i18n="hero.tagline"
-    >
-      Construyo aplicaciones web y móviles escalables — de la interfaz a la nube —
-      con Angular, Node.js, TypeScript y AWS. Más de 8 años convirtiendo
-      requerimientos complejos en productos sólidos y fáciles de mantener.
-    </p>
+    <div class="hero-in flex gap-8 sm:gap-10" style="--stagger: 2">
+      <div class="w-[3px] shrink-0 bg-accent"></div>
+      <p class="max-w-xl text-xl leading-relaxed text-muted sm:text-2xl" data-i18n="hero.tagline">
+        Construyo aplicaciones web y móviles escalables — de la interfaz a la nube —
+        con Angular, Node.js, TypeScript y AWS. Más de 8 años convirtiendo
+        requerimientos complejos en productos sólidos y fáciles de mantener.
+      </p>
+    </div>
 
-    <div class="hero-in mt-10 flex flex-wrap gap-4" style="--stagger: 3">
+    <div class="hero-in flex flex-wrap" style="--stagger: 3">
       <a
         href="#projects"
-        class="rounded-full bg-text px-6 py-3 text-sm font-medium text-bg transition-transform duration-300 hover:scale-105"
+        class="group flex items-center gap-2 bg-text px-7 py-4 text-base font-bold tracking-wide text-bg transition-colors duration-300 hover:bg-accent hover:text-on-accent"
         data-i18n="hero.ctaProjects"
       >
         Ver proyectos
+        <svg
+          class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.25"
+        >
+          <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
       </a>
       <a
         href="#contact"
-        class="rounded-full border border-border px-6 py-3 text-sm font-medium text-text transition-colors duration-300 hover:border-electric hover:text-electric"
+        class="flex items-center border-2 border-l-0 border-border px-7 py-4 text-base font-bold tracking-wide text-text transition-colors duration-300 hover:bg-text hover:text-bg"
         data-i18n="hero.ctaContact"
       >
         Hablemos
@@ -63,10 +64,19 @@
   </div>
 
   <div
-    class="hero-in absolute bottom-10 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex"
+    class="hero-parallax pointer-events-none absolute inset-y-0 right-[-9rem] z-0 hidden items-center justify-center 2xl:flex"
+    aria-hidden="true"
+  >
+    <span class="mark-in -rotate-12 text-[44rem] leading-none font-black select-none" style="--stagger: 5">
+      <span class="text-accent/10">JS</span><span class="text-text/5">F</span>
+    </span>
+  </div>
+
+  <div
+    class="hero-in absolute bottom-10 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 sm:flex"
     style="--stagger: 4"
   >
-    <span class="text-xs tracking-[0.3em] text-muted uppercase" data-i18n="hero.scroll">Scroll</span>
-    <span class="h-10 w-px animate-pulse bg-gradient-to-b from-mint to-transparent"></span>
+    <span class="font-mono text-xs tracking-[0.3em] text-muted uppercase" data-i18n="hero.scroll">Scroll</span>
+    <span class="h-10 w-px animate-pulse bg-accent"></span>
   </div>
 </section>

@@ -3,106 +3,106 @@ const email = 'javierfranco0904@gmail.com';
 const linkedin = 'https://www.linkedin.com/in/jsfranco-dev';
 ---
 
-<section id="contact" class="mx-auto max-w-5xl px-6 py-28 sm:py-36">
-  <div class="reveal" style="--stagger: 0">
-    <span class="font-display text-sm tracking-[0.3em] text-electric uppercase" data-i18n="contact.eyebrow">Contacto</span>
-    <h2 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl" data-i18n="contact.title">
-      Construyamos algo juntos
-    </h2>
-    <p class="mt-4 max-w-xl text-muted" data-i18n="contact.intro">
-      ¿Tienes un proyecto en mente o una oportunidad para colaborar? Escríbeme, siempre estoy
-      abierto a nuevas conversaciones.
-    </p>
-  </div>
-
-  <div class="mt-14 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]">
-    <div class="reveal flex flex-col gap-4" style="--stagger: 1">
-      <a
-        href={`mailto:${email}`}
-        class="group flex items-center justify-between rounded-2xl border border-border bg-surface px-6 py-5 transition-colors duration-300 hover:border-electric/60"
-      >
-        <div>
-          <p class="text-xs tracking-[0.2em] text-muted uppercase" data-i18n="contact.emailLabel">Email</p>
-          <p class="mt-1 font-medium text-text">{email}</p>
+<section id="contact" class="bg-text text-bg">
+  <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
+    <div class="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
+      <div class="reveal flex flex-col gap-6" style="--stagger: 0">
+        <div class="flex items-baseline gap-4">
+          <span class="font-mono text-sm font-bold text-accent">05</span>
+          <span class="font-mono text-sm font-medium tracking-[0.3em] text-bg/60 uppercase" data-i18n="contact.eyebrow">Contacto</span>
         </div>
-        <span class="text-muted transition-transform duration-300 group-hover:translate-x-1 group-hover:text-electric">
-          →
-        </span>
-      </a>
+        <h2 class="text-4xl font-black tracking-tight sm:text-5xl" data-i18n="contact.title">
+          Construyamos algo juntos
+        </h2>
+        <p class="max-w-md text-lg text-bg/70" data-i18n="contact.intro">
+          ¿Tienes un proyecto en mente o una oportunidad para colaborar? Escríbeme, siempre estoy
+          abierto a nuevas conversaciones.
+        </p>
 
-      <a
-        href={linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="group flex items-center justify-between rounded-2xl border border-border bg-surface px-6 py-5 transition-colors duration-300 hover:border-electric/60"
-      >
-        <div>
-          <p class="text-xs tracking-[0.2em] text-muted uppercase" data-i18n="contact.linkedinLabel">LinkedIn</p>
-          <p class="mt-1 font-medium text-text">jsfranco-dev</p>
-        </div>
-        <span class="text-muted transition-transform duration-300 group-hover:translate-x-1 group-hover:text-electric">
-          →
-        </span>
-      </a>
+        <div class="mt-4 flex flex-col">
+          <a
+            href={`mailto:${email}`}
+            class="group flex items-center justify-between border-t border-bg/20 py-5 transition-colors duration-300 hover:text-accent"
+          >
+            <div>
+              <p class="font-mono text-sm tracking-[0.2em] text-bg/50 uppercase" data-i18n="contact.emailLabel">Email</p>
+              <p class="mt-1 text-lg font-bold">{email}</p>
+            </div>
+            <svg class="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </a>
 
-      <div
-        class="flex items-center justify-between rounded-2xl border border-dashed border-border px-6 py-5 opacity-60"
-      >
-        <div>
-          <p class="text-xs tracking-[0.2em] text-muted uppercase" data-i18n="contact.githubLabel">GitHub</p>
-          <p class="mt-1 font-medium text-text" data-i18n="contact.githubValue">Próximamente</p>
+          <a
+            href={linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center justify-between border-t border-b border-bg/20 py-5 transition-colors duration-300 hover:text-accent"
+          >
+            <div>
+              <p class="font-mono text-sm tracking-[0.2em] text-bg/50 uppercase" data-i18n="contact.linkedinLabel">LinkedIn</p>
+              <p class="mt-1 text-lg font-bold">jsfranco-dev</p>
+            </div>
+            <svg class="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </a>
+
+          <div class="flex items-center justify-between border-b border-dashed border-bg/20 py-5 opacity-50">
+            <div>
+              <p class="font-mono text-sm tracking-[0.2em] text-bg/50 uppercase" data-i18n="contact.githubLabel">GitHub</p>
+              <p class="mt-1 text-lg font-bold" data-i18n="contact.githubValue">Próximamente</p>
+            </div>
+          </div>
         </div>
       </div>
+
+      <form id="contact-form" class="reveal flex flex-col gap-5" style="--stagger: 1">
+        <div class="grid gap-5 sm:grid-cols-2">
+          <label class="flex flex-col gap-2 font-mono text-sm tracking-[0.15em] text-bg/60 uppercase">
+            <span data-i18n="contact.formNameLabel">Nombre</span>
+            <input
+              type="text"
+              name="name"
+              required
+              class="border-2 border-bg/25 bg-transparent px-4 py-3 font-sans text-base font-medium text-bg normal-case outline-none transition-colors duration-300 placeholder:text-bg/35 focus:border-accent"
+              placeholder="Tu nombre"
+              data-i18n-placeholder="contact.formNamePlaceholder"
+            />
+          </label>
+          <label class="flex flex-col gap-2 font-mono text-sm tracking-[0.15em] text-bg/60 uppercase">
+            <span data-i18n="contact.formEmailLabel">Email</span>
+            <input
+              type="email"
+              name="email"
+              required
+              class="border-2 border-bg/25 bg-transparent px-4 py-3 font-sans text-base font-medium text-bg normal-case outline-none transition-colors duration-300 placeholder:text-bg/35 focus:border-accent"
+              placeholder="tu@email.com"
+              data-i18n-placeholder="contact.formEmailPlaceholder"
+            />
+          </label>
+        </div>
+
+        <label class="flex flex-col gap-2 font-mono text-sm tracking-[0.15em] text-bg/60 uppercase">
+          <span data-i18n="contact.formMessageLabel">Mensaje</span>
+          <textarea
+            name="message"
+            rows="5"
+            required
+            class="resize-none border-2 border-bg/25 bg-transparent px-4 py-3 font-sans text-base font-medium text-bg normal-case outline-none transition-colors duration-300 placeholder:text-bg/35 focus:border-accent"
+            placeholder="Cuéntame sobre tu proyecto..."
+            data-i18n-placeholder="contact.formMessagePlaceholder"
+          ></textarea>
+        </label>
+
+        <button
+          type="submit"
+          class="group flex w-fit items-center gap-2 bg-accent px-8 py-4 text-base font-bold tracking-wide text-on-accent transition-transform duration-300 hover:scale-[1.02]"
+          data-i18n="contact.formSubmit"
+        >
+          Enviar mensaje
+          <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </button>
+
+        <p id="form-status" class="hidden font-mono text-base text-accent" role="status"></p>
+      </form>
     </div>
-
-    <form id="contact-form" class="reveal flex flex-col gap-5" style="--stagger: 2">
-      <div class="grid gap-5 sm:grid-cols-2">
-        <label class="flex flex-col gap-2 text-sm text-muted">
-          <span data-i18n="contact.formNameLabel">Nombre</span>
-          <input
-            type="text"
-            name="name"
-            required
-            class="rounded-xl border border-border bg-surface px-4 py-3 text-text outline-none transition-colors duration-300 placeholder:text-muted/50 focus:border-electric"
-            placeholder="Tu nombre"
-            data-i18n-placeholder="contact.formNamePlaceholder"
-          />
-        </label>
-        <label class="flex flex-col gap-2 text-sm text-muted">
-          <span data-i18n="contact.formEmailLabel">Email</span>
-          <input
-            type="email"
-            name="email"
-            required
-            class="rounded-xl border border-border bg-surface px-4 py-3 text-text outline-none transition-colors duration-300 placeholder:text-muted/50 focus:border-electric"
-            placeholder="tu@email.com"
-            data-i18n-placeholder="contact.formEmailPlaceholder"
-          />
-        </label>
-      </div>
-
-      <label class="flex flex-col gap-2 text-sm text-muted">
-        <span data-i18n="contact.formMessageLabel">Mensaje</span>
-        <textarea
-          name="message"
-          rows="5"
-          required
-          class="resize-none rounded-xl border border-border bg-surface px-4 py-3 text-text outline-none transition-colors duration-300 placeholder:text-muted/50 focus:border-electric"
-          placeholder="Cuéntame sobre tu proyecto..."
-          data-i18n-placeholder="contact.formMessagePlaceholder"
-        ></textarea>
-      </label>
-
-      <button
-        type="submit"
-        class="self-start rounded-full bg-text px-8 py-3 text-sm font-medium text-bg transition-transform duration-300 hover:scale-105"
-        data-i18n="contact.formSubmit"
-      >
-        Enviar mensaje
-      </button>
-
-      <p id="form-status" class="hidden text-sm text-mint" role="status"></p>
-    </form>
   </div>
 </section>
 
