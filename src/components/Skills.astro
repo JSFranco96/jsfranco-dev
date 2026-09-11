@@ -8,13 +8,15 @@ const core = [
   { label: 'Firebase' },
 ];
 
+const secondary = ['NestJS', 'RESTful APIs', 'Docker', 'PrimeNG', 'Angular Material'];
+
 const learning = ['Swift', 'Kotlin'];
 ---
 
 <section id="skills" class="mx-auto max-w-6xl border-b-2 border-border px-6 py-24 sm:py-32">
   <div class="reveal flex flex-col gap-2" style="--stagger: 0">
     <div class="flex items-baseline gap-4">
-      <span class="font-mono text-sm font-bold text-accent">04</span>
+      <span class="font-mono text-sm font-bold text-accent">03</span>
       <span class="font-mono text-sm font-medium tracking-[0.3em] text-muted uppercase" data-i18n="skills.eyebrow">Skills</span>
     </div>
     <h2 class="mt-2 text-4xl font-black tracking-tight sm:text-5xl" data-i18n="skills.title">
@@ -38,6 +40,21 @@ const learning = ['Swift', 'Kotlin'];
   </div>
 
   <div class="reveal mt-8 flex flex-col gap-3" style="--stagger: 7">
+    <span class="font-mono text-sm tracking-[0.25em] text-muted uppercase" data-i18n="skills.secondaryLabel">
+      También trabajo con
+    </span>
+    <div class="flex flex-wrap gap-3">
+      {
+        secondary.map((skill) => (
+          <div class="border border-border px-4 py-2.5">
+            <span class="text-base font-bold text-text">{skill}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="reveal mt-8 flex flex-col gap-3" style="--stagger: 8">
     <span class="font-mono text-sm tracking-[0.25em] text-muted uppercase" data-i18n="skills.learningLabel">
       Incursionando en desarrollo móvil nativo
     </span>

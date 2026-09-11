@@ -1,6 +1,7 @@
 ---
 const email = 'javierfranco0904@gmail.com';
 const linkedin = 'https://www.linkedin.com/in/jsfranco-dev';
+const github = 'https://github.com/JSFranco96';
 ---
 
 <section id="contact" class="bg-text text-bg">
@@ -8,7 +9,7 @@ const linkedin = 'https://www.linkedin.com/in/jsfranco-dev';
     <div class="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
       <div class="reveal flex flex-col gap-6" style="--stagger: 0">
         <div class="flex items-baseline gap-4">
-          <span class="font-mono text-sm font-bold text-accent">05</span>
+          <span class="font-mono text-sm font-bold text-accent">04</span>
           <span class="font-mono text-sm font-medium tracking-[0.3em] text-bg/60 uppercase" data-i18n="contact.eyebrow">Contacto</span>
         </div>
         <h2 class="text-4xl font-black tracking-tight sm:text-5xl" data-i18n="contact.title">
@@ -44,12 +45,18 @@ const linkedin = 'https://www.linkedin.com/in/jsfranco-dev';
             <svg class="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round" /></svg>
           </a>
 
-          <div class="flex items-center justify-between border-b border-dashed border-bg/20 py-5 opacity-50">
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center justify-between border-b border-bg/20 py-5 transition-colors duration-300 hover:text-accent"
+          >
             <div>
               <p class="font-mono text-sm tracking-[0.2em] text-bg/50 uppercase" data-i18n="contact.githubLabel">GitHub</p>
-              <p class="mt-1 text-lg font-bold" data-i18n="contact.githubValue">Próximamente</p>
+              <p class="mt-1 text-lg font-bold" data-i18n="contact.githubValue">JSFranco96</p>
             </div>
-          </div>
+            <svg class="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </a>
         </div>
       </div>
 

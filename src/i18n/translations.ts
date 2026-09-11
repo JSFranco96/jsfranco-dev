@@ -3,12 +3,11 @@ export const translations = {
     meta: {
       title: 'Javier Steven Franco Ospina — Full-Stack Developer',
       description:
-        'Full-Stack Developer con +8 años de experiencia en Angular, Node.js, TypeScript, MongoDB y AWS. Construyendo aplicaciones web y móviles escalables.',
+        'Full-Stack Developer con +9 años de experiencia en Angular, Node.js, TypeScript, MongoDB y AWS. Construyendo aplicaciones web y móviles escalables.',
     },
     nav: {
       about: 'Sobre mí',
       experience: 'Experiencia',
-      projects: 'Proyectos',
       skills: 'Skills',
       contact: 'Contacto',
       menuOpenLabel: 'Abrir menú',
@@ -18,8 +17,8 @@ export const translations = {
     hero: {
       eyebrow: 'Full-Stack Developer',
       tagline:
-        'Construyo aplicaciones web y móviles escalables — de la interfaz a la nube — con Angular, Node.js, TypeScript y AWS. Más de 8 años convirtiendo requerimientos complejos en productos sólidos y fáciles de mantener.',
-      ctaProjects: 'Ver proyectos',
+        'Construyo aplicaciones web y móviles escalables — de la interfaz a la nube — con Angular, Node.js, TypeScript y AWS. Más de 9 años convirtiendo requerimientos complejos en productos sólidos y fáciles de mantener.',
+      ctaExperience: 'Ver experiencia',
       ctaContact: 'Hablemos',
       scroll: 'Scroll',
     },
@@ -27,7 +26,7 @@ export const translations = {
       eyebrow: 'Sobre mí',
       title: 'De la idea al producto en producción',
       p1a: 'Soy Full-Stack Developer con más de ',
-      p1b: '8 años de experiencia',
+      p1b: '9 años de experiencia',
       p1c:
         ' construyendo aplicaciones web, móviles y basadas en la nube. He participado en proyectos que van desde sistemas de logística hasta plataformas de e-commerce personalizadas, trabajando principalmente con ',
       p1d: 'Angular, Node.js, TypeScript y AWS',
@@ -60,34 +59,24 @@ export const translations = {
           description:
             'Supervisé proyectos de desarrollo de software de principio a fin, mentorizando desarrolladores junior e implementando procesos de code review para elevar la calidad del equipo.',
         },
-      ],
-    },
-    projects: {
-      eyebrow: 'Proyectos',
-      title: 'Trabajo seleccionado',
-      intro:
-        'Estoy preparando estudios de caso detallados de mis proyectos recientes. Mientras tanto, aquí tienes un adelanto de lo que viene.',
-      items: [
         {
-          tag: 'Web App',
-          title: 'Proyecto Próximamente',
-          description: 'Un nuevo caso de estudio está en camino. Vuelve pronto para ver los detalles.',
+          period: 'Consultoría independiente',
+          title: 'Desarrollo full-stack freelance',
+          description:
+            'Como profesional independiente en Radar Technologies & Consulting, desarrollé soluciones full-stack con C# para clientes remotos.',
         },
         {
-          tag: 'Mobile App',
-          title: 'Proyecto Próximamente',
-          description: 'Explorando Swift y Kotlin en una nueva aplicación móvil nativa.',
-        },
-        {
-          tag: 'Cloud / AWS',
-          title: 'Proyecto Próximamente',
-          description: 'Una arquitectura cloud-first, documentada de principio a fin.',
+          period: 'Primeros pasos',
+          title: 'Sistemas de logística e inventarios',
+          description:
+            'En Unired desarrollé aplicaciones full-stack para logística, inventarios y ERP con KnockoutJS, C# y VB.Net, incluyendo la implementación de sistemas de escaneo en dispositivos Android.',
         },
       ],
     },
     skills: {
       eyebrow: 'Skills',
       title: 'Tecnologías con las que trabajo',
+      secondaryLabel: 'También trabajo con',
       learningLabel: 'Incursionando en desarrollo móvil nativo',
       learningTag: 'En aprendizaje',
     },
@@ -99,7 +88,7 @@ export const translations = {
       emailLabel: 'Email',
       linkedinLabel: 'LinkedIn',
       githubLabel: 'GitHub',
-      githubValue: 'Próximamente',
+      githubValue: 'JSFranco96',
       formNameLabel: 'Nombre',
       formNamePlaceholder: 'Tu nombre',
       formEmailLabel: 'Email',
@@ -115,12 +104,11 @@ export const translations = {
     meta: {
       title: 'Javier Steven Franco Ospina — Full-Stack Developer',
       description:
-        'Full-Stack Developer with 8+ years of experience in Angular, Node.js, TypeScript, MongoDB and AWS. Building scalable web and mobile applications.',
+        'Full-Stack Developer with 9+ years of experience in Angular, Node.js, TypeScript, MongoDB and AWS. Building scalable web and mobile applications.',
     },
     nav: {
       about: 'About',
       experience: 'Experience',
-      projects: 'Projects',
       skills: 'Skills',
       contact: 'Contact',
       menuOpenLabel: 'Open menu',
@@ -130,8 +118,8 @@ export const translations = {
     hero: {
       eyebrow: 'Full-Stack Developer',
       tagline:
-        'I build scalable web and mobile applications — from the interface to the cloud — with Angular, Node.js, TypeScript and AWS. Over 8 years turning complex requirements into solid, maintainable products.',
-      ctaProjects: 'View projects',
+        'I build scalable web and mobile applications — from the interface to the cloud — with Angular, Node.js, TypeScript and AWS. Over 9 years turning complex requirements into solid, maintainable products.',
+      ctaExperience: 'View experience',
       ctaContact: "Let's talk",
       scroll: 'Scroll',
     },
@@ -139,7 +127,7 @@ export const translations = {
       eyebrow: 'About me',
       title: 'From idea to production-ready product',
       p1a: "I'm a Full-Stack Developer with over ",
-      p1b: '8 years of experience',
+      p1b: '9 years of experience',
       p1c:
         " building web, mobile and cloud-based applications. I've worked on projects ranging from logistics systems to custom e-commerce platforms, mainly using ",
       p1d: 'Angular, Node.js, TypeScript and AWS',
@@ -172,34 +160,24 @@ export const translations = {
           description:
             "I oversaw software development projects end to end, mentoring junior developers and implementing code review processes to raise the team's overall quality.",
         },
-      ],
-    },
-    projects: {
-      eyebrow: 'Projects',
-      title: 'Selected work',
-      intro:
-        "I'm putting together detailed case studies of my recent projects. In the meantime, here's a preview of what's coming.",
-      items: [
         {
-          tag: 'Web App',
-          title: 'Project Coming Soon',
-          description: 'A new case study is on its way. Check back soon for the details.',
+          period: 'Independent consulting',
+          title: 'Freelance full-stack development',
+          description:
+            'As an independent professional at Radar Technologies & Consulting, I built full-stack solutions with C# for remote clients.',
         },
         {
-          tag: 'Mobile App',
-          title: 'Project Coming Soon',
-          description: 'Exploring Swift and Kotlin in a new native mobile app.',
-        },
-        {
-          tag: 'Cloud / AWS',
-          title: 'Project Coming Soon',
-          description: 'A cloud-first architecture, documented from start to finish.',
+          period: 'Early career',
+          title: 'Logistics and inventory systems',
+          description:
+            'At Unired I built full-stack applications for logistics, inventory, and ERP systems with KnockoutJS, C#, and VB.Net, including implementing Android-based scanning systems.',
         },
       ],
     },
     skills: {
       eyebrow: 'Skills',
       title: 'Technologies I work with',
+      secondaryLabel: 'Also working with',
       learningLabel: 'Getting started with native mobile development',
       learningTag: 'Learning',
     },
@@ -211,7 +189,7 @@ export const translations = {
       emailLabel: 'Email',
       linkedinLabel: 'LinkedIn',
       githubLabel: 'GitHub',
-      githubValue: 'Coming soon',
+      githubValue: 'JSFranco96',
       formNameLabel: 'Name',
       formNamePlaceholder: 'Your name',
       formEmailLabel: 'Email',
