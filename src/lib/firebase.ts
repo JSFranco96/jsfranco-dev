@@ -1,4 +1,5 @@
-import { initializeApp, getApps, getApp } from 'firebase/app';
+import { initializeApp, getApps, getApp, type FirebaseApp } from 'firebase/app';
+import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -10,8 +11,24 @@ const firebaseConfig = {
   appId: import.meta.env.PUBLIC_FIREBASE_APP_ID,
 };
 
-function getFirebaseApp() {
-  return getApps().length ? getApp() : initializeApp(firebaseConfig);
+let appCheckInitialized = false;
+
+function getFirebaseApp(): FirebaseApp {
+  const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+
+  // Gate direct Firestore access to requests coming from this app running on
+  // an allowed domain — without this, anyone can copy firebaseConfig (it's
+  // public by design) and write to Firestore straight from a script.
+  const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
+  if (!appCheckInitialized && recaptchaSiteKey) {
+    initializeAppCheck(app, {
+      provider: new ReCaptchaV3Provider(recaptchaSiteKey),
+      isTokenAutoRefreshEnabled: true,
+    });
+    appCheckInitialized = true;
+  }
+
+  return app;
 }
 
 export interface ContactMessage {
