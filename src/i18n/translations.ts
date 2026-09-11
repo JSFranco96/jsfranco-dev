@@ -111,6 +111,11 @@ export const translations = {
       qrCaption: 'Escanea para volver a esta tarjeta',
       backHome: 'Ir al sitio completo',
     },
+    notFound: {
+      eyebrow: 'Error 404',
+      message: 'Esta página no existe o se movió de lugar.',
+      backHome: 'Volver al inicio',
+    },
   },
   en: {
     meta: {
@@ -223,6 +228,11 @@ export const translations = {
       webLabel: 'Web',
       qrCaption: 'Scan to come back to this card',
       backHome: 'Go to full site',
+    },
+    notFound: {
+      eyebrow: 'Error 404',
+      message: "This page doesn't exist or it moved somewhere else.",
+      backHome: 'Back to home',
     },
   },
 };

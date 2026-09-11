@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="404 — Página no encontrada"
+  description="La página que buscas no existe o se movió de lugar."
+>
+  <Nav />
+  <main class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden border-b-2 border-border px-6 pt-20 text-center">
+    <span
+      class="pointer-events-none absolute inset-y-0 right-[-6rem] z-0 hidden -rotate-12 items-center justify-center text-[26rem] leading-none font-black select-none sm:flex"
+      aria-hidden="true"
+    >
+      <span class="text-accent/10">JS</span><span class="text-text/5">F</span>
+    </span>
+
+    <div class="reveal relative z-10 flex flex-col items-center gap-6" style="--stagger: 0">
+      <span class="font-mono text-sm font-medium tracking-[0.3em] text-muted uppercase" data-i18n="notFound.eyebrow">
+        Error 404
+      </span>
+      <h1 class="text-8xl leading-none font-black tracking-tight text-text sm:text-9xl">404</h1>
+      <p class="max-w-md text-lg leading-relaxed text-muted" data-i18n="notFound.message">
+        Esta página no existe o se movió de lugar.
+      </p>
+      <a
+        href="/"
+        class="group mt-2 flex items-center gap-2 bg-text px-7 py-4 text-base font-bold tracking-wide text-bg transition-colors duration-300 hover:bg-accent hover:text-on-accent"
+        data-i18n="notFound.backHome"
+      >
+        Volver al inicio
+        <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
