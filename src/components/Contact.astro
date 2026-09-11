@@ -152,16 +152,24 @@ const github = 'https://github.com/JSFranco96';
     submitButton?.setAttribute('disabled', 'true');
     showStatus(dict.formStatusSending, 'success');
 
+    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 10000));
+
     try {
-      await submitContactMessage({
-        name: String(formData.get('name') ?? '').trim(),
-        email: String(formData.get('email') ?? '').trim(),
-        message: String(formData.get('message') ?? '').trim(),
-        lang,
-      });
+      await Promise.race([
+        submitContactMessage({
+          name: String(formData.get('name') ?? '').trim(),
+          email: String(formData.get('email') ?? '').trim(),
+          message: String(formData.get('message') ?? '').trim(),
+          lang,
+        }),
+        timeout,
+      ]);
       showStatus(dict.formStatusSuccess, 'success');
       form.reset();
     } catch {
+      // Covers both a rejected write (e.g. permission-denied) and a write that
+      // never resolves at all (Firestore queues locally and retries forever
+      // when it can't reach the backend) — either way the user needs to know.
       showStatus(dict.formStatusError, 'error');
     } finally {
       submitButton?.removeAttribute('disabled');
