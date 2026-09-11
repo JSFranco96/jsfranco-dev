@@ -100,6 +100,17 @@ export const translations = {
       formStatusSuccess: '¡Gracias por escribir! Te responderé lo antes posible.',
       formStatusError: 'Algo salió mal enviando tu mensaje. Intenta de nuevo o escríbeme directo por email.',
     },
+    card: {
+      title: 'Javier Steven Franco Ospina',
+      role: 'Full-Stack Developer',
+      saveContact: 'Guardar contacto',
+      emailLabel: 'Email',
+      linkedinLabel: 'LinkedIn',
+      githubLabel: 'GitHub',
+      webLabel: 'Web',
+      qrCaption: 'Escanea para volver a esta tarjeta',
+      backHome: 'Ir al sitio completo',
+    },
   },
   en: {
     meta: {
@@ -201,6 +212,17 @@ export const translations = {
       formStatusSending: 'Sending...',
       formStatusSuccess: "Thanks for reaching out! I'll get back to you as soon as possible.",
       formStatusError: 'Something went wrong sending your message. Try again or email me directly.',
+    },
+    card: {
+      title: 'Javier Steven Franco Ospina',
+      role: 'Full-Stack Developer',
+      saveContact: 'Save contact',
+      emailLabel: 'Email',
+      linkedinLabel: 'LinkedIn',
+      githubLabel: 'GitHub',
+      webLabel: 'Web',
+      qrCaption: 'Scan to come back to this card',
+      backHome: 'Go to full site',
     },
   },
 };
