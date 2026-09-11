@@ -96,8 +96,9 @@ export const translations = {
       formMessageLabel: 'Mensaje',
       formMessagePlaceholder: 'Cuéntame sobre tu proyecto...',
       formSubmit: 'Enviar mensaje',
-      formStatus:
-        '¡Gracias por escribir! Este formulario es una demo — usa el email directo mientras se conecta el envío.',
+      formStatusSending: 'Enviando...',
+      formStatusSuccess: '¡Gracias por escribir! Te responderé lo antes posible.',
+      formStatusError: 'Algo salió mal enviando tu mensaje. Intenta de nuevo o escríbeme directo por email.',
     },
   },
   en: {
@@ -197,8 +198,9 @@ export const translations = {
       formMessageLabel: 'Message',
       formMessagePlaceholder: 'Tell me about your project...',
       formSubmit: 'Send message',
-      formStatus:
-        "Thanks for reaching out! This form is a demo — use the direct email while the submission gets wired up.",
+      formStatusSending: 'Sending...',
+      formStatusSuccess: "Thanks for reaching out! I'll get back to you as soon as possible.",
+      formStatusError: 'Something went wrong sending your message. Try again or email me directly.',
     },
   },
 };

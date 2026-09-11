@@ -98,16 +98,23 @@ const github = 'https://github.com/JSFranco96';
           ></textarea>
         </label>
 
+        <div class="absolute h-0 w-0 overflow-hidden opacity-0" aria-hidden="true">
+          <label>
+            Company
+            <input type="text" name="company" tabindex="-1" autocomplete="off" />
+          </label>
+        </div>
+
         <button
           type="submit"
-          class="group flex w-fit items-center gap-2 bg-accent px-8 py-4 text-base font-bold tracking-wide text-on-accent transition-transform duration-300 hover:scale-[1.02]"
+          class="group flex w-fit items-center gap-2 bg-accent px-8 py-4 text-base font-bold tracking-wide text-on-accent transition-transform duration-300 hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-60"
           data-i18n="contact.formSubmit"
         >
           Enviar mensaje
           <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg>
         </button>
 
-        <p id="form-status" class="hidden font-mono text-base text-accent" role="status"></p>
+        <p id="form-status" class="hidden font-mono text-base" role="status"></p>
       </form>
     </div>
   </div>
@@ -115,18 +122,49 @@ const github = 'https://github.com/JSFranco96';
 
 <script>
   import { translations, type Lang } from '../i18n/translations';
+  import { submitContactMessage } from '../lib/firebase';
 
   const form = document.getElementById('contact-form') as HTMLFormElement | null;
   const status = document.getElementById('form-status');
+  const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement | null;
 
-  form?.addEventListener('submit', (e) => {
+  function currentLang(): Lang {
+    return localStorage.getItem('lang') === 'en' ? 'en' : 'es';
+  }
+
+  function showStatus(text: string, variant: 'success' | 'error') {
+    if (!status) return;
+    status.textContent = text;
+    status.classList.remove('hidden', 'text-accent', 'text-red-400');
+    status.classList.add(variant === 'success' ? 'text-accent' : 'text-red-400');
+  }
+
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (status) {
-      const stored = localStorage.getItem('lang');
-      const lang: Lang = stored === 'en' ? 'en' : 'es';
-      status.textContent = translations[lang].contact.formStatus;
-      status.classList.remove('hidden');
+    if (!form) return;
+
+    const formData = new FormData(form);
+    if (formData.get('company')) return; // honeypot: silently drop bot submissions
+
+    const lang = currentLang();
+    const dict = translations[lang].contact;
+
+    submitButton?.setAttribute('disabled', 'true');
+    showStatus(dict.formStatusSending, 'success');
+
+    try {
+      await submitContactMessage({
+        name: String(formData.get('name') ?? '').trim(),
+        email: String(formData.get('email') ?? '').trim(),
+        message: String(formData.get('message') ?? '').trim(),
+        lang,
+      });
+      showStatus(dict.formStatusSuccess, 'success');
+      form.reset();
+    } catch {
+      showStatus(dict.formStatusError, 'error');
+    } finally {
+      submitButton?.removeAttribute('disabled');
     }
-    form.reset();
   });
 </script>
