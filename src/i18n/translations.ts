@@ -176,14 +176,19 @@ export const translations = {
         title: 'Ubicco',
         summary:
           'App móvil para ferias universitarias que funciona sin conexión: los estudiantes exploran instituciones, guardan favoritos, toman notas y ubican cada stand en el mapa del evento.',
-        role: 'Desarrollé la app móvil, el pipeline del mapa y el landing, en un equipo con una diseñadora y un desarrollador backend.',
+        role: 'Desarrollé la app móvil, el pipeline del mapa y el landing, en un proyecto creado y liderado por Alison Méndez.',
         status: 'En fase de pruebas, aún no publicada en las tiendas.',
-        team: ['Diseño UI/UX', 'Backend y API', 'App móvil, mapa y landing'],
+        team: [
+          'Product Designer. Creó la idea y lidera el producto, desde el diseño hasta el trabajo con las ferias.',
+          'Backend y API',
+          'App móvil, mapa y landing',
+        ],
         sections: [
           {
             heading: 'Contexto',
             body: [
               'En una feria universitaria hay decenas de instituciones, charlas en paralelo y casi siempre mala señal. Los estudiantes salen con folletos sueltos y sin recordar qué les dijo cada universidad.',
+              'La idea vino de Alison Méndez, Product Designer, que la trajo al equipo y lidera el producto: desde el diseño hasta el trabajo con las ferias.',
             ],
             bullets: [],
           },
@@ -198,7 +203,7 @@ export const translations = {
             heading: 'Lo que construí',
             body: [],
             bullets: [
-              'App en Ionic, Angular y Capacitor para Android e iOS, en español e inglés, a partir de los diseños en Figma del equipo.',
+              'App en Ionic, Angular y Capacitor para Android e iOS, en español e inglés, a partir de los diseños en Figma de Alison.',
               'Onboarding por nivel académico, área de estudio e idioma del programa, para mostrar primero las instituciones relevantes.',
               'Búsqueda y filtros rápidos, detalle de cada institución con sus programas, favoritos, notas y agenda de seminarios.',
               'Mapa interactivo del recinto que resalta el stand de cada institución.',
@@ -447,14 +452,19 @@ export const translations = {
         title: 'Ubicco',
         summary:
           'A mobile app for university fairs that works offline: students browse institutions, save favorites, take notes, and find every booth on the venue map.',
-        role: 'I built the mobile app, the map pipeline, and the landing page, on a team with a designer and a backend developer.',
+        role: 'I built the mobile app, the map pipeline, and the landing page, on a project created and led by Alison Méndez.',
         status: 'In testing, not yet published in the app stores.',
-        team: ['UI/UX design', 'Backend and API', 'Mobile app, map, and landing page'],
+        team: [
+          'Product Designer. Came up with the idea and leads the product, from design to working with the fairs.',
+          'Backend and API',
+          'Mobile app, map, and landing page',
+        ],
         sections: [
           {
             heading: 'Context',
             body: [
               "A university fair has dozens of institutions, parallel talks, and almost always bad reception. Students leave with a pile of brochures and can't remember what each university told them.",
+              'The idea came from Alison Méndez, a Product Designer who brought it to the team and leads the product, from design to working with the fairs.',
             ],
             bullets: [],
           },
@@ -469,7 +479,7 @@ export const translations = {
             heading: 'What I built',
             body: [],
             bullets: [
-              "An Ionic, Angular, and Capacitor app for Android and iOS, in Spanish and English, built from the team's Figma designs.",
+              "An Ionic, Angular, and Capacitor app for Android and iOS, in Spanish and English, built from Alison's Figma designs.",
               'Onboarding by academic level, field of study, and program language, so the most relevant institutions show up first.',
               'Quick search and filters, institution detail pages with their programs, favorites, notes, and a seminar schedule.',
               "An interactive venue map that highlights each institution's booth.",
