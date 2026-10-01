@@ -17,6 +17,11 @@ export const projects = [
       { name: 'Javier Franco' },
     ],
   },
+  {
+    slug: 'bellaglow',
+    stack: ['Astro', 'Tailwind CSS', 'TypeScript', 'Vercel'],
+    links: [{ label: 'bella-glow-studio.vercel.app', href: 'https://bella-glow-studio.vercel.app' }],
+  },
 ] as const;
 
 export type ProjectSlug = (typeof projects)[number]['slug'];

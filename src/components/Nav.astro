@@ -17,7 +17,7 @@ const links = [
       JSFranco<span class="text-accent">.dev</span>
     </a>
 
-    <ul class="hidden gap-8 md:flex">
+    <ul class="hidden gap-8 lg:flex">
       {
         links.map((link, i) => (
           <li>
@@ -34,7 +34,7 @@ const links = [
     </ul>
 
     <div class="flex items-center gap-2">
-      <div class="hidden items-center gap-2 md:flex">
+      <div class="hidden items-center gap-2 lg:flex">
         <LangToggle />
         <ThemeToggle />
       </div>
@@ -44,7 +44,7 @@ const links = [
         aria-label="Abrir menú"
         data-i18n-aria-label="nav.menuOpenLabel"
         aria-expanded="false"
-        class="flex flex-col gap-1.5 p-2 md:hidden"
+        class="flex flex-col gap-1.5 p-2 lg:hidden"
       >
         <span class="h-px w-6 bg-text transition-transform duration-300"></span>
         <span class="h-px w-6 bg-text transition-opacity duration-300"></span>
@@ -55,7 +55,7 @@ const links = [
 
   <ul
     id="mobile-menu"
-    class="hidden flex-col gap-1 border-t-2 border-border bg-bg px-6 py-4 md:hidden"
+    class="hidden flex-col gap-1 border-t-2 border-border bg-bg px-6 py-4 lg:hidden"
   >
     {
       links.map((link, i) => (

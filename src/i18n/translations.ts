@@ -95,6 +95,13 @@ export const translations = {
             'App para ferias universitarias que funciona sin conexión: los estudiantes exploran instituciones, guardan favoritos, toman notas y ubican cada stand en el mapa.',
           status: 'En fase de pruebas',
         },
+        {
+          tag: 'Marca + Web · Emprendimiento',
+          title: 'Bella Glow Studio',
+          description:
+            'Identidad visual y landing para una cosmetóloga independiente en Medellín, construidas con el contenido real de su Instagram.',
+          status: 'Borrador en revisión',
+        },
       ],
     },
     caseStudies: {
@@ -225,6 +232,64 @@ export const translations = {
             heading: 'Estado',
             body: [
               'La app está en fase de pruebas y todavía no está publicada en las tiendas. El landing ya está en línea en ubicco.app.',
+            ],
+            bullets: [],
+          },
+        ],
+      },
+      bellaglow: {
+        meta: {
+          title: 'Bella Glow Studio — Caso de estudio · Javier Franco',
+          description:
+            'Identidad visual y landing para una cosmetóloga independiente en Medellín, con el contenido real de su Instagram.',
+        },
+        tag: 'Marca + Web · Emprendimiento',
+        title: 'Bella Glow Studio',
+        summary:
+          'Identidad visual y landing para una cosmetóloga independiente en Medellín: del logo que ya usaba a un sistema de marca y una página para agendar por WhatsApp.',
+        role: 'Proyecto pro bono: dirección de marca, diseño y desarrollo de la página.',
+        status: 'Primera versión publicada, en revisión con la cosmetóloga antes del lanzamiento.',
+        sections: [
+          {
+            heading: 'Contexto',
+            body: [
+              'Una cosmetóloga independiente en Medellín que ofrece tratamientos faciales, corporales, capilares y post-operatorios. Su negocio vivía en Instagram y WhatsApp: tenía un logo, publicaciones con sus servicios y clientas que le escribían directamente.',
+              'Necesitaba una página propia que la presentara con profesionalismo y llevara a las personas a agendar.',
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'El reto',
+            body: [
+              'El logo era una imagen con mucho detalle: se veía bien en grande, pero se perdía como foto de perfil o favicon. Y la información de los servicios estaba repartida en publicaciones de Instagram, escrita sobre las imágenes.',
+              'Además, no todo lo que se publica en redes debe ir en una página web: había que separar lo que conviene mostrar de lo que requiere confirmación.',
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'Lo que construí',
+            body: [],
+            bullets: [
+              'Una vectorización fiel del logo a partir de la imagen original, y tres direcciones para simplificarlo.',
+              'Un sistema de marca: logo completo para espacios grandes y monograma compacto para foto de perfil y favicon, con paleta, tipografías y componentes base.',
+              'Una landing en Astro y Tailwind con servicios por categoría, presentación de la cosmetóloga, galería y agenda por WhatsApp con un mensaje ya escrito.',
+              'Una imagen para compartir el enlace en WhatsApp y redes, y metadatos para buscadores.',
+            ],
+          },
+          {
+            heading: 'Decisiones',
+            body: [],
+            bullets: [
+              'Contenido real, nada inventado: los tratamientos, la frase de presentación y las fotos salen de su propio Instagram. Donde faltaba información, la página no la rellena.',
+              'Cuidado con lo que se publica: dejé fuera los procedimientos con agujas o sueros hasta que ella confirme cuáles puede ofrecer, y solo usé fotos donde no se reconoce a ninguna clienta.',
+              'WhatsApp primero: en lugar de una plataforma de reservas que todavía no usa, el botón abre el chat con el mensaje listo. La página funciona desde el primer día y la agenda en línea se puede sumar después.',
+              'Fotos optimizadas al compilar: Astro las convierte a WebP en varios tamaños, para que la página cargue rápido con datos móviles aunque las originales sean pesadas.',
+            ],
+          },
+          {
+            heading: 'Estado',
+            body: [
+              'La primera versión está publicada y en revisión con ella. Lo siguiente es confirmar sus datos, decidir si suma una agenda en línea y conectar un dominio propio.',
             ],
             bullets: [],
           },
@@ -371,6 +436,13 @@ export const translations = {
             'An app for university fairs that works offline: students browse institutions, save favorites, take notes, and find every booth on the venue map.',
           status: 'In testing',
         },
+        {
+          tag: 'Brand + Web · Small business',
+          title: 'Bella Glow Studio',
+          description:
+            'Visual identity and landing page for an independent cosmetologist in Medellín, built from the real content of her Instagram.',
+          status: 'Draft in review',
+        },
       ],
     },
     caseStudies: {
@@ -501,6 +573,64 @@ export const translations = {
             heading: 'Status',
             body: [
               "The app is in testing and isn't in the app stores yet. The landing page is live at ubicco.app.",
+            ],
+            bullets: [],
+          },
+        ],
+      },
+      bellaglow: {
+        meta: {
+          title: 'Bella Glow Studio — Case study · Javier Franco',
+          description:
+            'Visual identity and landing page for an independent cosmetologist in Medellín, built from the real content of her Instagram.',
+        },
+        tag: 'Brand + Web · Small business',
+        title: 'Bella Glow Studio',
+        summary:
+          'Visual identity and landing page for an independent cosmetologist in Medellín: from the logo she already had to a brand system and a page for booking over WhatsApp.',
+        role: 'Pro bono project: brand direction, design, and development of the site.',
+        status: 'First version live, in review with the cosmetologist before launch.',
+        sections: [
+          {
+            heading: 'Context',
+            body: [
+              'An independent cosmetologist in Medellín offering facial, body, hair, and post-surgery treatments. Her business lived on Instagram and WhatsApp: she had a logo, posts describing her services, and clients who messaged her directly.',
+              'She needed a site of her own that presented her professionally and led people to book.',
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'The challenge',
+            body: [
+              'The logo was a highly detailed image: it looked good large but got lost as a profile picture or favicon. And the service information was spread across Instagram posts, written on top of images.',
+              "Also, not everything posted on social media belongs on a website: what's worth showing had to be separated from what needs confirming first.",
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'What I built',
+            body: [],
+            bullets: [
+              'A faithful vectorization of the logo from the original image, plus three directions for simplifying it.',
+              'A brand system: the full logo for large spaces and a compact monogram for profile pictures and the favicon, with a palette, typography, and base components.',
+              'An Astro and Tailwind landing page with services by category, an introduction to the cosmetologist, a gallery, and booking over WhatsApp with a prefilled message.',
+              'A share image for links on WhatsApp and social media, and search engine metadata.',
+            ],
+          },
+          {
+            heading: 'Decisions',
+            body: [],
+            bullets: [
+              'Real content, nothing made up: the treatments, the intro quote, and the photos come from her own Instagram. Where information was missing, the page leaves it out.',
+              'Care with what gets published: I left out procedures involving needles or IV drips until she confirms which ones she can offer, and only used photos where no client can be recognized.',
+              "WhatsApp first: instead of a booking platform she doesn't use yet, the button opens the chat with the message ready. The page works from day one, and online booking can be added later.",
+              'Photos optimized at build time: Astro converts them to WebP in several sizes, so the page loads fast on mobile data even though the originals are heavy.',
+            ],
+          },
+          {
+            heading: 'Status',
+            body: [
+              'The first version is live and in review with her. Next steps are confirming her details, deciding whether to add online booking, and connecting a custom domain.',
             ],
             bullets: [],
           },
