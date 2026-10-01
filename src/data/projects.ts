@@ -4,7 +4,7 @@ export const projects = [
   {
     slug: 'ferrosmuz',
     stack: ['Odoo 17', 'Python', 'Docker', 'Google Cloud', 'Astro', 'Tailwind CSS', 'Firebase'],
-    links: [{ label: 'ferros-muz-web.vercel.app', href: 'https://ferros-muz-web.vercel.app' }],
+    links: [{ label: 'ferrosmuz.com', href: 'https://www.ferrosmuz.com' }],
   },
   {
     slug: 'ubicco',
