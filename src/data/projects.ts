@@ -3,7 +3,7 @@
 export const projects = [
   {
     slug: 'ferrosmuz',
-    stack: ['Odoo 17', 'Python', 'Docker', 'Google Cloud', 'Astro', 'Tailwind CSS', 'Firebase'],
+    stack: ['Odoo 17', 'Python', 'Docker', 'Caddy', 'Google Cloud', 'Astro', 'Tailwind CSS', 'Firebase'],
     links: [{ label: 'ferrosmuz.com', href: 'https://www.ferrosmuz.com' }],
   },
   {

@@ -141,7 +141,7 @@ export const translations = {
             body: [],
             bullets: [
               'Landing en Astro con identidad visual propia, datos del negocio centralizados, botón de WhatsApp y formulario de contacto conectado a Firebase.',
-              'Odoo 17 con Docker Compose, desplegado en Google Cloud, con ventas, punto de venta, inventario, compras, facturación y sitio web.',
+              'Odoo 17 con Docker Compose, desplegado en Google Cloud detrás de Caddy con HTTPS automático, con ventas, punto de venta, inventario, compras, facturación y sitio web.',
               'Un módulo a medida con pantalla de inicio propia: indicadores del día (ventas, entregas pendientes, mercadería por recibir y stock bajo) y accesos directos a las tareas diarias.',
               'Tienda online con el mismo estilo visual del landing, mediante un segundo módulo de tema.',
               'Un manual de uso para el equipo, enlazado desde el propio backoffice.',
@@ -160,7 +160,7 @@ export const translations = {
           {
             heading: 'Estado',
             body: [
-              'El sistema está en piloto con el equipo de la ferretería. Los siguientes pasos son el dominio propio para la tienda y medir con ellos qué tareas del día a día se volvieron más rápidas.',
+              'El sistema está en piloto con el equipo de la ferretería. El landing y la tienda ya funcionan en su dominio propio, ferrosmuz.com, con HTTPS. El siguiente paso es medir con ellos qué tareas del día a día se volvieron más rápidas.',
             ],
             bullets: [],
           },
@@ -417,7 +417,7 @@ export const translations = {
             body: [],
             bullets: [
               'An Astro landing page with its own visual identity, centralized business details, a WhatsApp button, and a contact form backed by Firebase.',
-              'Odoo 17 on Docker Compose, deployed on Google Cloud, with sales, point of sale, inventory, purchasing, invoicing, and website.',
+              'Odoo 17 on Docker Compose, deployed on Google Cloud behind Caddy with automatic HTTPS, with sales, point of sale, inventory, purchasing, invoicing, and website.',
               "A custom module with its own home screen: today's numbers (sales, pending deliveries, incoming stock, and low stock) and shortcuts to daily tasks.",
               'An online store that matches the landing page, through a second theme module.',
               'A user manual for the team, linked from the back office itself.',
@@ -436,7 +436,7 @@ export const translations = {
           {
             heading: 'Status',
             body: [
-              'The system is in a pilot with the store team. Next steps are a custom domain for the store and measuring with them which daily tasks got faster.',
+              'The system is in a pilot with the store team. The landing page and the store are live on their own domain, ferrosmuz.com, over HTTPS. The next step is measuring with the team which daily tasks got faster.',
             ],
             bullets: [],
           },
