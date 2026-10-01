@@ -176,7 +176,7 @@ export const translations = {
         title: 'Ubicco',
         summary:
           'App móvil para ferias universitarias que funciona sin conexión: los estudiantes exploran instituciones, guardan favoritos, toman notas y ubican cada stand en el mapa del evento.',
-        role: 'Desarrollé la app móvil, el pipeline del mapa y el landing, en un proyecto creado y liderado por Alison Méndez.',
+        role: 'Desarrollé la app móvil, el pipeline del mapa y el landing, en un proyecto creado y liderado por Alison J. Méndez F..',
         status: 'En fase de pruebas, aún no publicada en las tiendas.',
         team: [
           'Product Designer. Creó la idea y lidera el producto, desde el diseño hasta el trabajo con las ferias.',
@@ -188,7 +188,7 @@ export const translations = {
             heading: 'Contexto',
             body: [
               'En una feria universitaria hay decenas de instituciones, charlas en paralelo y casi siempre mala señal. Los estudiantes salen con folletos sueltos y sin recordar qué les dijo cada universidad.',
-              'La idea vino de Alison Méndez, Product Designer, que la trajo al equipo y lidera el producto: desde el diseño hasta el trabajo con las ferias.',
+              'La idea vino de Alison J. Méndez F., Product Designer, que la trajo al equipo y lidera el producto: desde el diseño hasta el trabajo con las ferias.',
             ],
             bullets: [],
           },
@@ -452,7 +452,7 @@ export const translations = {
         title: 'Ubicco',
         summary:
           'A mobile app for university fairs that works offline: students browse institutions, save favorites, take notes, and find every booth on the venue map.',
-        role: 'I built the mobile app, the map pipeline, and the landing page, on a project created and led by Alison Méndez.',
+        role: 'I built the mobile app, the map pipeline, and the landing page, on a project created and led by Alison J. Méndez F..',
         status: 'In testing, not yet published in the app stores.',
         team: [
           'Product Designer. Came up with the idea and leads the product, from design to working with the fairs.',
@@ -464,7 +464,7 @@ export const translations = {
             heading: 'Context',
             body: [
               "A university fair has dozens of institutions, parallel talks, and almost always bad reception. Students leave with a pile of brochures and can't remember what each university told them.",
-              'The idea came from Alison Méndez, a Product Designer who brought it to the team and leads the product, from design to working with the fairs.',
+              'The idea came from Alison J. Méndez F., a Product Designer who brought it to the team and leads the product, from design to working with the fairs.',
             ],
             bullets: [],
           },

@@ -12,8 +12,8 @@ export const projects = [
     links: [{ label: 'ubicco.app', href: 'https://www.ubicco.app' }],
     // Roles are translated in caseStudies.ubicco.team, in the same order.
     team: [
-      { name: 'Alison Méndez', href: 'https://www.linkedin.com/in/alimendezf/' },
-      { name: 'José González' },
+      { name: 'Alison J. Méndez F.', href: 'https://www.linkedin.com/in/alimendezf/' },
+      { name: 'José González', href: 'https://github.com/jdgc14' },
       { name: 'Javier Franco' },
     ],
   },
