@@ -3,16 +3,17 @@ import ThemeToggle from './ThemeToggle.astro';
 import LangToggle from './LangToggle.astro';
 
 const links = [
-  { href: '#about', key: 'nav.about', label: 'Sobre mí' },
-  { href: '#experience', key: 'nav.experience', label: 'Experiencia' },
-  { href: '#skills', key: 'nav.skills', label: 'Skills' },
-  { href: '#contact', key: 'nav.contact', label: 'Contacto' },
+  { href: '/#about', key: 'nav.about', label: 'Sobre mí' },
+  { href: '/#experience', key: 'nav.experience', label: 'Experiencia' },
+  { href: '/#projects', key: 'nav.projects', label: 'Proyectos' },
+  { href: '/#skills', key: 'nav.skills', label: 'Skills' },
+  { href: '/#contact', key: 'nav.contact', label: 'Contacto' },
 ];
 ---
 
 <header class="fixed inset-x-0 top-0 z-50 border-b-2 border-border bg-bg">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-    <a href="#top" class="text-xl font-black tracking-tight text-text">
+    <a href="/#top" class="text-xl font-black tracking-tight text-text">
       JSFranco<span class="text-accent">.dev</span>
     </a>
 

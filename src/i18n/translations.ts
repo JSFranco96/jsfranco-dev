@@ -8,6 +8,7 @@ export const translations = {
     nav: {
       about: 'Sobre mí',
       experience: 'Experiencia',
+      projects: 'Proyectos',
       skills: 'Skills',
       contact: 'Contacto',
       menuOpenLabel: 'Abrir menú',
@@ -18,7 +19,7 @@ export const translations = {
       eyebrow: 'Full-Stack Developer',
       tagline:
         'Construyo aplicaciones web y móviles escalables — de la interfaz a la nube — con Angular, Node.js, TypeScript y AWS. Más de 9 años convirtiendo requerimientos complejos en productos sólidos y fáciles de mantener.',
-      ctaExperience: 'Ver experiencia',
+      ctaProjects: 'Ver proyectos',
       ctaContact: 'Hablemos',
       scroll: 'Scroll',
     },
@@ -73,6 +74,156 @@ export const translations = {
         },
       ],
     },
+    projects: {
+      eyebrow: 'Proyectos',
+      title: 'Trabajo reciente',
+      intro:
+        'Proyectos que construí de punta a punta. Cada uno tiene un caso de estudio con el problema, lo que hice y las decisiones detrás.',
+      caseStudyCta: 'Ver caso de estudio',
+      items: [
+        {
+          tag: 'Web + ERP · Comercio local',
+          title: 'FerrosMuz',
+          description:
+            'Landing, tienda online y backoffice en Odoo para una ferretería familiar de Medellín, simplificados para que un equipo pequeño los opere sin capacitación pesada.',
+          status: 'Piloto en curso',
+        },
+        {
+          tag: 'App móvil · Offline-first',
+          title: 'Ubicco',
+          description:
+            'App para ferias universitarias que funciona sin conexión: los estudiantes exploran instituciones, guardan favoritos, toman notas y ubican cada stand en el mapa.',
+          status: 'En fase de pruebas',
+        },
+      ],
+    },
+    caseStudies: {
+      back: 'Volver a proyectos',
+      roleLabel: 'Mi rol',
+      statusLabel: 'Estado',
+      stackLabel: 'Stack',
+      linksLabel: 'Enlaces',
+      ctaTitle: '¿Tienes un proyecto parecido?',
+      ctaText: 'Cuéntame qué necesitas y vemos juntos cómo resolverlo.',
+      ctaButton: 'Hablemos',
+      ferrosmuz: {
+        meta: {
+          title: 'FerrosMuz — Caso de estudio · Javier Franco',
+          description:
+            'Landing, tienda online y backoffice en Odoo 17 para una ferretería familiar de Medellín, simplificados para un equipo pequeño.',
+        },
+        tag: 'Web + ERP · Comercio local',
+        title: 'FerrosMuz',
+        summary:
+          'Landing, tienda online y backoffice en Odoo para una ferretería familiar de Medellín, simplificados para que un equipo pequeño los opere sin capacitación pesada.',
+        role: 'Desarrollo completo: landing, implementación de Odoo, módulos a medida y despliegue.',
+        status: 'Piloto en curso con el equipo de la ferretería.',
+        sections: [
+          {
+            heading: 'Contexto',
+            body: [
+              'FerrosMuz es una ferretería familiar en Medellín con seis rubros: herramientas, pinturas, plomería, electricidad, materiales de construcción y jardinería. Atiende en mostrador, por teléfono y por WhatsApp.',
+              'Necesitaba presencia en internet, una tienda online y una forma ordenada de llevar ventas, inventario y compras.',
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'El reto',
+            body: [
+              'Odoo cubre todo eso, pero de entrada muestra decenas de menús, campos y opciones pensadas para empresas grandes: varias monedas, varias compañías, variantes, lotes. Para un equipo pequeño eso es ruido, y el ruido es una de las razones más comunes por las que un ERP termina abandonado.',
+              'El objetivo no era instalar Odoo, sino que el equipo lo usara todos los días.',
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'Lo que construí',
+            body: [],
+            bullets: [
+              'Landing en Astro con identidad visual propia, datos del negocio centralizados, botón de WhatsApp y formulario de contacto conectado a Firebase.',
+              'Odoo 17 con Docker Compose, desplegado en Google Cloud, con ventas, punto de venta, inventario, compras, facturación y sitio web.',
+              'Un módulo a medida con pantalla de inicio propia: indicadores del día (ventas, entregas pendientes, mercadería por recibir y stock bajo) y accesos directos a las tareas diarias.',
+              'Tienda online con el mismo estilo visual del landing, mediante un segundo módulo de tema.',
+              'Un manual de uso para el equipo, enlazado desde el propio backoffice.',
+            ],
+          },
+          {
+            heading: 'Decisiones',
+            body: [],
+            bullets: [
+              'Apagar funciones, no solo esconder menús: desactivé las funciones avanzadas desde los grupos nativos de Odoo, lo que también limpia los formularios. Si algún día hacen falta, se reactivan desde Ajustes sin tocar código.',
+              'Un solo rol, “Equipo”: el dueño y las encargadas operan ventas, caja, stock, compras y facturas, pero no los ajustes técnicos ni los permisos.',
+              'Historial en los productos: nombre, precio, categoría y estado quedan registrados con quién y cuándo los cambió, para que varias personas editen el catálogo sin perder el rastro.',
+              'Un script repetible para preparar el piloto: limpia los datos de demostración de Odoo sin borrar nada (cancela o archiva), distingue lo real de lo de ejemplo y crea los usuarios del equipo.',
+            ],
+          },
+          {
+            heading: 'Estado',
+            body: [
+              'El sistema está en piloto con el equipo de la ferretería. Los siguientes pasos son el dominio propio para la tienda y medir con ellos qué tareas del día a día se volvieron más rápidas.',
+            ],
+            bullets: [],
+          },
+        ],
+      },
+      ubicco: {
+        meta: {
+          title: 'Ubicco — Caso de estudio · Javier Franco',
+          description:
+            'App móvil offline-first para ferias universitarias, construida con Ionic, Angular y Capacitor, con un pipeline propio para el mapa del evento.',
+        },
+        tag: 'App móvil · Offline-first',
+        title: 'Ubicco',
+        summary:
+          'App móvil para ferias universitarias que funciona sin conexión: los estudiantes exploran instituciones, guardan favoritos, toman notas y ubican cada stand en el mapa del evento.',
+        role: 'Desarrollé la app móvil, el pipeline del mapa y el landing, en un equipo con una diseñadora y un desarrollador backend.',
+        status: 'En fase de pruebas, aún no publicada en las tiendas.',
+        sections: [
+          {
+            heading: 'Contexto',
+            body: [
+              'En una feria universitaria hay decenas de instituciones, charlas en paralelo y casi siempre mala señal. Los estudiantes salen con folletos sueltos y sin recordar qué les dijo cada universidad.',
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'El reto',
+            body: [
+              'La app tenía que funcionar justo donde la conexión falla: dentro del recinto, con cientos de personas en la misma red. Eso descartaba depender del servidor para buscar, ver el mapa o guardar notas.',
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'Lo que construí',
+            body: [],
+            bullets: [
+              'App en Ionic, Angular y Capacitor para Android e iOS, en español e inglés, a partir de los diseños en Figma del equipo.',
+              'Onboarding por nivel académico, área de estudio e idioma del programa, para mostrar primero las instituciones relevantes.',
+              'Búsqueda y filtros rápidos, detalle de cada institución con sus programas, favoritos, notas y agenda de seminarios.',
+              'Mapa interactivo del recinto que resalta el stand de cada institución.',
+              'Integración con el API en Python del equipo (autenticación, favoritos y notas) y con Firebase para archivos y notificaciones push.',
+              'Landing en Astro con política de privacidad y página de recuperación de contraseña.',
+            ],
+          },
+          {
+            heading: 'Decisiones',
+            body: [],
+            bullets: [
+              'Offline-first con una sola descarga: los datos del evento llegan como un JSON y el mapa como un SVG, y ambos se guardan en el dispositivo. Buscar y navegar no necesitan red.',
+              'Cola de sincronización: notas y favoritos se guardan primero en el teléfono y se envían al servidor cuando vuelve la conexión, con reintento si algo falla.',
+              'Un pipeline propio para el mapa: el plano sale de Figma como un SVG genérico. Escribí un script en Python, sin dependencias externas, que detecta los stands, reemplaza los textos vectorizados por texto real, asigna el número de stand que usa la app e incrusta la bandera de cada país, para que el archivo final funcione sin conexión.',
+              'Estado reactivo con Angular signals, para que el indicador de sincronización y los pendientes se actualicen solos.',
+            ],
+          },
+          {
+            heading: 'Estado',
+            body: [
+              'La app está en fase de pruebas y todavía no está publicada en las tiendas. El landing ya está en línea en ubicco.app.',
+            ],
+            bullets: [],
+          },
+        ],
+      },
+    },
     skills: {
       eyebrow: 'Skills',
       title: 'Tecnologías con las que trabajo',
@@ -126,6 +277,7 @@ export const translations = {
     nav: {
       about: 'About',
       experience: 'Experience',
+      projects: 'Projects',
       skills: 'Skills',
       contact: 'Contact',
       menuOpenLabel: 'Open menu',
@@ -136,7 +288,7 @@ export const translations = {
       eyebrow: 'Full-Stack Developer',
       tagline:
         'I build scalable web and mobile applications — from the interface to the cloud — with Angular, Node.js, TypeScript and AWS. Over 9 years turning complex requirements into solid, maintainable products.',
-      ctaExperience: 'View experience',
+      ctaProjects: 'View projects',
       ctaContact: "Let's talk",
       scroll: 'Scroll',
     },
@@ -190,6 +342,156 @@ export const translations = {
             'At Unired I built full-stack applications for logistics, inventory, and ERP systems with KnockoutJS, C#, and VB.Net, including implementing Android-based scanning systems.',
         },
       ],
+    },
+    projects: {
+      eyebrow: 'Projects',
+      title: 'Recent work',
+      intro:
+        'Projects I built end to end. Each one has a case study covering the problem, what I built, and the decisions behind it.',
+      caseStudyCta: 'Read case study',
+      items: [
+        {
+          tag: 'Web + ERP · Local business',
+          title: 'FerrosMuz',
+          description:
+            'Landing page, online store, and Odoo back office for a family-owned hardware store in Medellín, simplified so a small team can run it without heavy training.',
+          status: 'Pilot in progress',
+        },
+        {
+          tag: 'Mobile app · Offline-first',
+          title: 'Ubicco',
+          description:
+            'An app for university fairs that works offline: students browse institutions, save favorites, take notes, and find every booth on the venue map.',
+          status: 'In testing',
+        },
+      ],
+    },
+    caseStudies: {
+      back: 'Back to projects',
+      roleLabel: 'My role',
+      statusLabel: 'Status',
+      stackLabel: 'Stack',
+      linksLabel: 'Links',
+      ctaTitle: 'Have a similar project?',
+      ctaText: "Tell me what you need and we'll figure out how to solve it together.",
+      ctaButton: "Let's talk",
+      ferrosmuz: {
+        meta: {
+          title: 'FerrosMuz — Case study · Javier Franco',
+          description:
+            'Landing page, online store, and Odoo 17 back office for a family-owned hardware store in Medellín, simplified for a small team.',
+        },
+        tag: 'Web + ERP · Local business',
+        title: 'FerrosMuz',
+        summary:
+          'Landing page, online store, and Odoo back office for a family-owned hardware store in Medellín, simplified so a small team can run it without heavy training.',
+        role: 'Full delivery: landing page, Odoo implementation, custom modules, and deployment.',
+        status: 'Pilot in progress with the store team.',
+        sections: [
+          {
+            heading: 'Context',
+            body: [
+              'FerrosMuz is a family-owned hardware store in Medellín covering six categories: tools, paint, plumbing, electrical, building materials, and gardening. It serves customers at the counter, by phone, and over WhatsApp.',
+              'It needed an online presence, an online store, and an organized way to track sales, inventory, and purchasing.',
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'The challenge',
+            body: [
+              "Odoo covers all of that, but out of the box it shows dozens of menus, fields, and options built for large companies: multiple currencies, multiple companies, variants, lots. For a small team that's noise, and noise is one of the most common reasons an ERP ends up abandoned.",
+              'The goal wasn\'t to install Odoo. It was for the team to use it every day.',
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'What I built',
+            body: [],
+            bullets: [
+              'An Astro landing page with its own visual identity, centralized business details, a WhatsApp button, and a contact form backed by Firebase.',
+              'Odoo 17 on Docker Compose, deployed on Google Cloud, with sales, point of sale, inventory, purchasing, invoicing, and website.',
+              "A custom module with its own home screen: today's numbers (sales, pending deliveries, incoming stock, and low stock) and shortcuts to daily tasks.",
+              'An online store that matches the landing page, through a second theme module.',
+              'A user manual for the team, linked from the back office itself.',
+            ],
+          },
+          {
+            heading: 'Decisions',
+            body: [],
+            bullets: [
+              "Turn features off, don't just hide menus: I disabled advanced features through Odoo's native groups, which also cleans up the forms. If they're ever needed, they can be turned back on from Settings without touching code.",
+              'A single "Team" role: the owner and the managers run sales, the register, stock, purchasing, and invoices, but not technical settings or permissions.',
+              'Change history on products: name, price, category, and status changes are logged with who made them and when, so several people can edit the catalog without losing track.',
+              "A repeatable script to prepare the pilot: it clears Odoo's demo data without deleting anything (it cancels or archives), tells real records from sample ones, and creates the team's users.",
+            ],
+          },
+          {
+            heading: 'Status',
+            body: [
+              'The system is in a pilot with the store team. Next steps are a custom domain for the store and measuring with them which daily tasks got faster.',
+            ],
+            bullets: [],
+          },
+        ],
+      },
+      ubicco: {
+        meta: {
+          title: 'Ubicco — Case study · Javier Franco',
+          description:
+            'An offline-first mobile app for university fairs, built with Ionic, Angular, and Capacitor, with a custom pipeline for the venue map.',
+        },
+        tag: 'Mobile app · Offline-first',
+        title: 'Ubicco',
+        summary:
+          'A mobile app for university fairs that works offline: students browse institutions, save favorites, take notes, and find every booth on the venue map.',
+        role: 'I built the mobile app, the map pipeline, and the landing page, on a team with a designer and a backend developer.',
+        status: 'In testing, not yet published in the app stores.',
+        sections: [
+          {
+            heading: 'Context',
+            body: [
+              "A university fair has dozens of institutions, parallel talks, and almost always bad reception. Students leave with a pile of brochures and can't remember what each university told them.",
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'The challenge',
+            body: [
+              'The app had to work exactly where connectivity fails: inside the venue, with hundreds of people on the same network. That ruled out depending on the server to search, view the map, or save notes.',
+            ],
+            bullets: [],
+          },
+          {
+            heading: 'What I built',
+            body: [],
+            bullets: [
+              "An Ionic, Angular, and Capacitor app for Android and iOS, in Spanish and English, built from the team's Figma designs.",
+              'Onboarding by academic level, field of study, and program language, so the most relevant institutions show up first.',
+              'Quick search and filters, institution detail pages with their programs, favorites, notes, and a seminar schedule.',
+              "An interactive venue map that highlights each institution's booth.",
+              "Integration with the team's Python API (authentication, favorites, and notes) and with Firebase for files and push notifications.",
+              'An Astro landing page with a privacy policy and a password recovery page.',
+            ],
+          },
+          {
+            heading: 'Decisions',
+            body: [],
+            bullets: [
+              "Offline-first with a single download: event data arrives as one JSON file and the map as an SVG, and both are stored on the device. Searching and browsing don't need a network.",
+              'A sync queue: notes and favorites are saved on the phone first and sent to the server when the connection comes back, with a retry if something fails.',
+              "A custom map pipeline: the floor plan comes out of Figma as a generic SVG. I wrote a dependency-free Python script that detects the booths, replaces vectorized labels with real text, assigns the booth number the app uses, and embeds each country's flag, so the final file works offline.",
+              'Reactive state with Angular signals, so the sync indicator and pending counts update on their own.',
+            ],
+          },
+          {
+            heading: 'Status',
+            body: [
+              "The app is in testing and isn't in the app stores yet. The landing page is live at ubicco.app.",
+            ],
+            bullets: [],
+          },
+        ],
+      },
     },
     skills: {
       eyebrow: 'Skills',

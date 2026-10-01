@@ -2,7 +2,7 @@
 
 Portafolio personal de Javier Franco, Full-Stack Developer: [jsfranco.dev](https://jsfranco.dev).
 
-Sitio de una sola página con secciones de sobre mí, experiencia, skills y contacto, más una tarjeta de contacto digital en [`/card`](https://jsfranco.dev/card).
+Página principal con secciones de sobre mí, experiencia, proyectos, skills y contacto; un caso de estudio por proyecto en `/proyectos/<slug>`; y una tarjeta de contacto digital en [`/card`](https://jsfranco.dev/card).
 
 ## Stack
 
@@ -17,6 +17,7 @@ Sitio de una sola página con secciones de sobre mí, experiencia, skills y cont
 - **Tema claro y oscuro**, con selector. El tema se aplica antes del primer render para evitar destellos.
 - **Formulario de contacto real**: escribe en Firestore desde el navegador, con campo trampa (honeypot) contra bots simples, tiempo máximo de espera y mensajes de éxito o error.
 - **Tarjeta digital** (`/card`): enlaces de contacto, código QR y descarga de un archivo vCard (`/contact.vcf`) para guardar el contacto en el teléfono.
+- **Casos de estudio** generados desde `src/data/projects.ts` (slug, stack y enlaces) y los textos de `caseStudies` en las traducciones. Para agregar un proyecto: una entrada en `projects.ts`, su tarjeta en `projects.items` y su caso en `caseStudies.<slug>`, en ambos idiomas.
 - **Página 404** con el mismo estilo del sitio.
 - Metadatos para redes y buscadores (Open Graph, Twitter Cards y JSON-LD).
 
@@ -51,11 +52,12 @@ Sin esas variables el sitio se construye igual, pero el formulario de contacto n
 
 ```text
 src/
-├── components/   secciones de la página (Hero, About, Experience, Skills, Contact) y controles
+├── components/   secciones de la página (Hero, About, Experience, Projects, Skills, Contact) y controles
+├── data/         datos de los proyectos que no dependen del idioma
 ├── i18n/         traducciones ES / EN
 ├── layouts/      layout base: metadatos, tema, fuentes e idioma
 ├── lib/          cliente de Firebase (Firestore y App Check)
-├── pages/        index, /card, /contact.vcf y 404
+├── pages/        index, /proyectos/[slug], /card, /contact.vcf y 404
 └── styles/       variables de diseño y animaciones
 ```
 
