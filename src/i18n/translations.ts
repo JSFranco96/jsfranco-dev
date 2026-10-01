@@ -354,7 +354,7 @@ export const translations = {
     meta: {
       title: 'Javier Steven Franco Ospina — Full-Stack Developer',
       description:
-        'Full-Stack Developer with 9+ years in Angular, Node.js, TypeScript and the cloud. I also help local businesses in Medellín with their website, Odoo and online presence.',
+        'Full-Stack Developer, 9+ years with Angular, Node.js, TypeScript and the cloud. I also help Medellín businesses with their website, Odoo and online presence.',
     },
     nav: {
       about: 'About',
