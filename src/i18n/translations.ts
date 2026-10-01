@@ -295,7 +295,7 @@ export const translations = {
           {
             heading: 'Estado',
             body: [
-              'La página está publicada y en revisión con ella, y el plan de 30 días arranca en octubre de 2026. Al día 30 se miden las reseñas en Google, las consultas por WhatsApp y los seguidores, y con eso se decide qué sigue: agenda en línea, dominio propio o publicidad pagada.',
+              'La página está publicada en su dominio propio, bellaglowstudio.lat, y en revisión con ella; el plan de 30 días arranca en octubre de 2026. Al día 30 se miden las reseñas en Google, las consultas por WhatsApp y los seguidores, y con eso se decide qué sigue: agenda en línea o publicidad pagada.',
             ],
             bullets: [],
           },
@@ -646,7 +646,7 @@ export const translations = {
           {
             heading: 'Status',
             body: [
-              'The site is live and in review with her, and the 30-day plan starts in October 2026. On day 30 we measure Google reviews, WhatsApp inquiries, and followers, and use that to decide what comes next: online booking, a custom domain, or paid ads.',
+              'The site is live on its own domain, bellaglowstudio.lat, and in review with her; the 30-day plan starts in October 2026. On day 30 we measure Google reviews, WhatsApp inquiries, and followers, and use that to decide what comes next: online booking or paid ads.',
             ],
             bullets: [],
           },
