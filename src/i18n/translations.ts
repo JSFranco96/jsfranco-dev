@@ -96,10 +96,10 @@ export const translations = {
           status: 'En fase de pruebas',
         },
         {
-          tag: 'Marca + Web · Emprendimiento',
+          tag: 'Marca, web y marketing · Emprendimiento',
           title: 'Bella Glow Studio',
           description:
-            'Identidad visual y landing para una cosmetóloga independiente en Medellín, construidas con el contenido real de su Instagram.',
+            'Identidad visual, landing y plan de marketing de 30 días para una cosmetóloga independiente en Medellín, construidos con el contenido real de su Instagram.',
           status: 'Borrador en revisión',
         },
       ],
@@ -243,12 +243,12 @@ export const translations = {
           description:
             'Identidad visual y landing para una cosmetóloga independiente en Medellín, con el contenido real de su Instagram.',
         },
-        tag: 'Marca + Web · Emprendimiento',
+        tag: 'Marca, web y marketing · Emprendimiento',
         title: 'Bella Glow Studio',
         summary:
-          'Identidad visual y landing para una cosmetóloga independiente en Medellín: del logo que ya usaba a un sistema de marca y una página para agendar por WhatsApp.',
-        role: 'Proyecto pro bono: dirección de marca, diseño y desarrollo de la página.',
-        status: 'Primera versión publicada, en revisión con la cosmetóloga antes del lanzamiento.',
+          'Identidad visual, landing y plan de marketing para una cosmetóloga independiente en Medellín: del logo que ya usaba a un sistema de marca, una página para agendar por WhatsApp y un plan de 30 días para que la encuentren.',
+        role: 'Proyecto pro bono: dirección de marca, diseño y desarrollo de la página, y plan de marketing digital.',
+        status: 'Página publicada y en revisión con la cosmetóloga; el plan de 30 días arranca en octubre de 2026.',
         sections: [
           {
             heading: 'Contexto',
@@ -274,6 +274,9 @@ export const translations = {
               'Un sistema de marca: logo completo para espacios grandes y monograma compacto para foto de perfil y favicon, con paleta, tipografías y componentes base.',
               'Una landing en Astro y Tailwind con servicios por categoría, presentación de la cosmetóloga, galería y agenda por WhatsApp con un mensaje ya escrito.',
               'Una imagen para compartir el enlace en WhatsApp y redes, y metadatos para buscadores.',
+              'Datos estructurados (schema.org) para que Google entienda el negocio: tipo, dirección, contacto y catálogo de tratamientos.',
+              'Una sección de testimonios lista para las reseñas reales, que aparece sola cuando se agrega la primera.',
+              'Un plan de 30 días: perfil de Google Maps, WhatsApp Business con catálogo y respuestas rápidas, un calendario de 8 reels y la meta de 10 reseñas.',
             ],
           },
           {
@@ -284,12 +287,15 @@ export const translations = {
               'Cuidado con lo que se publica: dejé fuera los procedimientos con agujas o sueros hasta que ella confirme cuáles puede ofrecer, y solo usé fotos donde no se reconoce a ninguna clienta.',
               'WhatsApp primero: en lugar de una plataforma de reservas que todavía no usa, el botón abre el chat con el mensaje listo. La página funciona desde el primer día y la agenda en línea se puede sumar después.',
               'Fotos optimizadas al compilar: Astro las convierte a WebP en varios tamaños, para que la página cargue rápido con datos móviles aunque las originales sean pesadas.',
+              'Un plan a su medida: está empezando como independiente y tiene poco tiempo, así que yo armo las herramientas y ella graba y publica. La grabación se concentra en un día y las publicaciones se programan.',
+              'Nada de reseñas inventadas: los testimonios esperan a las clientas reales, y los datos para Google no incluyen reseñas propias, que Google ignora.',
+              'Medir desde el día uno: el plan arranca con las cifras de hoy (seguidores, reseñas, consultas por WhatsApp) para comparar al día 30.',
             ],
           },
           {
             heading: 'Estado',
             body: [
-              'La primera versión está publicada y en revisión con ella. Lo siguiente es confirmar sus datos, decidir si suma una agenda en línea y conectar un dominio propio.',
+              'La página está publicada y en revisión con ella, y el plan de 30 días arranca en octubre de 2026. Al día 30 se miden las reseñas en Google, las consultas por WhatsApp y los seguidores, y con eso se decide qué sigue: agenda en línea, dominio propio o publicidad pagada.',
             ],
             bullets: [],
           },
@@ -437,10 +443,10 @@ export const translations = {
           status: 'In testing',
         },
         {
-          tag: 'Brand + Web · Small business',
+          tag: 'Brand, web, and marketing · Small business',
           title: 'Bella Glow Studio',
           description:
-            'Visual identity and landing page for an independent cosmetologist in Medellín, built from the real content of her Instagram.',
+            'Visual identity, landing page, and a 30-day marketing plan for an independent cosmetologist in Medellín, built from the real content of her Instagram.',
           status: 'Draft in review',
         },
       ],
@@ -584,12 +590,12 @@ export const translations = {
           description:
             'Visual identity and landing page for an independent cosmetologist in Medellín, built from the real content of her Instagram.',
         },
-        tag: 'Brand + Web · Small business',
+        tag: 'Brand, web, and marketing · Small business',
         title: 'Bella Glow Studio',
         summary:
-          'Visual identity and landing page for an independent cosmetologist in Medellín: from the logo she already had to a brand system and a page for booking over WhatsApp.',
-        role: 'Pro bono project: brand direction, design, and development of the site.',
-        status: 'First version live, in review with the cosmetologist before launch.',
+          'Visual identity, landing page, and marketing plan for an independent cosmetologist in Medellín: from the logo she already had to a brand system, a page for booking over WhatsApp, and a 30-day plan to get her found.',
+        role: 'Pro bono project: brand direction, design and development of the site, and a digital marketing plan.',
+        status: 'Site live and in review with the cosmetologist; the 30-day plan starts in October 2026.',
         sections: [
           {
             heading: 'Context',
@@ -615,6 +621,9 @@ export const translations = {
               'A brand system: the full logo for large spaces and a compact monogram for profile pictures and the favicon, with a palette, typography, and base components.',
               'An Astro and Tailwind landing page with services by category, an introduction to the cosmetologist, a gallery, and booking over WhatsApp with a prefilled message.',
               'A share image for links on WhatsApp and social media, and search engine metadata.',
+              "Structured data (schema.org) so Google understands the business: type, address, contact details, and treatment catalog.",
+              'A testimonials section ready for real reviews, which appears on its own once the first one is added.',
+              'A 30-day plan: a Google Maps profile, WhatsApp Business with a catalog and quick replies, a calendar of 8 reels, and a goal of 10 reviews.',
             ],
           },
           {
@@ -625,12 +634,15 @@ export const translations = {
               'Care with what gets published: I left out procedures involving needles or IV drips until she confirms which ones she can offer, and only used photos where no client can be recognized.',
               "WhatsApp first: instead of a booking platform she doesn't use yet, the button opens the chat with the message ready. The page works from day one, and online booking can be added later.",
               'Photos optimized at build time: Astro converts them to WebP in several sizes, so the page loads fast on mobile data even though the originals are heavy.',
+              "A plan that fits her: she's starting out on her own and has little time, so I set up the tools and she records and posts. Recording happens on a single day and posts are scheduled.",
+              "No made-up reviews: testimonials wait for real clients, and the data for Google includes no self-published reviews, which Google ignores.",
+              "Measure from day one: the plan starts with today's numbers (followers, reviews, WhatsApp inquiries) to compare on day 30.",
             ],
           },
           {
             heading: 'Status',
             body: [
-              'The first version is live and in review with her. Next steps are confirming her details, deciding whether to add online booking, and connecting a custom domain.',
+              'The site is live and in review with her, and the 30-day plan starts in October 2026. On day 30 we measure Google reviews, WhatsApp inquiries, and followers, and use that to decide what comes next: online booking, a custom domain, or paid ads.',
             ],
             bullets: [],
           },
