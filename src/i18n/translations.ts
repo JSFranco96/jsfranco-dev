@@ -3,7 +3,7 @@ export const translations = {
     meta: {
       title: 'Javier Steven Franco Ospina — Full-Stack Developer',
       description:
-        'Full-Stack Developer con +9 años de experiencia en Angular, Node.js, TypeScript, MongoDB y AWS. Construyendo aplicaciones web y móviles escalables.',
+        'Full-Stack Developer con +9 años en Angular, Node.js, TypeScript y la nube. También ayudo a negocios locales en Medellín con su web, Odoo y presencia digital.',
     },
     nav: {
       about: 'Sobre mí',
@@ -241,7 +241,7 @@ export const translations = {
         meta: {
           title: 'Bella Glow Studio — Caso de estudio · Javier Franco',
           description:
-            'Identidad visual y landing para una cosmetóloga independiente en Medellín, con el contenido real de su Instagram.',
+            'Identidad visual, landing y plan de marketing de 30 días para una cosmetóloga independiente en Medellín.',
         },
         tag: 'Marca, web y marketing · Emprendimiento',
         title: 'Bella Glow Studio',
@@ -354,7 +354,7 @@ export const translations = {
     meta: {
       title: 'Javier Steven Franco Ospina — Full-Stack Developer',
       description:
-        'Full-Stack Developer with 9+ years of experience in Angular, Node.js, TypeScript, MongoDB and AWS. Building scalable web and mobile applications.',
+        'Full-Stack Developer with 9+ years in Angular, Node.js, TypeScript and the cloud. I also help local businesses in Medellín with their website, Odoo and online presence.',
     },
     nav: {
       about: 'About',
@@ -592,7 +592,7 @@ export const translations = {
         meta: {
           title: 'Bella Glow Studio — Case study · Javier Franco',
           description:
-            'Visual identity and landing page for an independent cosmetologist in Medellín, built from the real content of her Instagram.',
+            'Visual identity, landing page, and a 30-day marketing plan for an independent cosmetologist in Medellín.',
         },
         tag: 'Brand, web, and marketing · Small business',
         title: 'Bella Glow Studio',
