@@ -8,9 +8,28 @@ const core = [
   { label: 'Firebase' },
 ];
 
-const secondary = ['NestJS', 'RESTful APIs', 'Docker', 'PrimeNG', 'Angular Material'];
+// Respaldadas por proyectos reales: Ionic/Capacitor (Ubicco), Astro y Tailwind
+// (los cuatro sitios), Python y Google Cloud (FerrosMuz).
+const secondary = [
+  'NestJS',
+  'RESTful APIs',
+  'Docker',
+  'PrimeNG',
+  'Angular Material',
+  'Ionic',
+  'Capacitor',
+  'Astro',
+  'Tailwind CSS',
+  'Python',
+  'Google Cloud',
+  'Vercel',
+];
 
-const learning = ['Swift', 'Kotlin'];
+// Odoo: implementado en FerrosMuz (en piloto), todavía aprendiendo el dominio.
+const learning = [
+  { label: 'Odoo', key: 'skills.learning.odoo' },
+  { label: 'Marketing digital para negocios locales', key: 'skills.learning.localMarketing' },
+];
 ---
 
 <section id="skills" class="mx-auto max-w-6xl border-b-2 border-border px-6 py-24 sm:py-32">
@@ -56,13 +75,13 @@ const learning = ['Swift', 'Kotlin'];
 
   <div class="reveal mt-8 flex flex-col gap-3" style="--stagger: 8">
     <span class="font-mono text-sm tracking-[0.25em] text-muted uppercase" data-i18n="skills.learningLabel">
-      Incursionando en desarrollo móvil nativo
+      Ampliando mi trabajo hacia negocios locales
     </span>
     <div class="flex flex-wrap gap-3">
       {
         learning.map((skill) => (
           <div class="flex items-center gap-3 border border-dashed border-border px-4 py-2.5">
-            <span class="text-base font-bold text-text">{skill}</span>
+            <span class="text-base font-bold text-text" data-i18n={skill.key}>{skill.label}</span>
             <span class="font-mono text-xs tracking-wide text-accent uppercase" data-i18n="skills.learningTag">
               En aprendizaje
             </span>

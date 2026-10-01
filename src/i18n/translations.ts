@@ -34,9 +34,9 @@ export const translations = {
       p1e: '.',
       p2:
         'Me apasiona escribir código limpio y mantenible, y trabajar de cerca con equipos multidisciplinarios para entregar soluciones escalables centradas en el usuario. Mi experiencia incluye liderar pequeños equipos de desarrollo, mentoría a desarrolladores junior, y colaboración directa con stakeholders técnicos y no técnicos.',
-      p3a: 'Actualmente estoy expandiendo mi trabajo hacia el desarrollo de ',
-      p3b: 'aplicaciones móviles nativas',
-      p3c: ' (Android/iOS), sumando Swift y Kotlin a mi caja de herramientas.',
+      p3a: 'Actualmente estoy ampliando mi trabajo hacia ',
+      p3b: 'negocios locales',
+      p3c: ': sitios web, implementaciones de Odoo y marketing digital para que sus clientes los encuentren.',
     },
     experience: {
       eyebrow: 'Experiencia',
@@ -306,7 +306,11 @@ export const translations = {
       eyebrow: 'Skills',
       title: 'Tecnologías con las que trabajo',
       secondaryLabel: 'También trabajo con',
-      learningLabel: 'Incursionando en desarrollo móvil nativo',
+      learningLabel: 'Ampliando mi trabajo hacia negocios locales',
+      learning: {
+        odoo: 'Odoo',
+        localMarketing: 'Marketing digital para negocios locales',
+      },
       learningTag: 'En aprendizaje',
     },
     contact: {
@@ -381,9 +385,9 @@ export const translations = {
       p1e: '.',
       p2:
         "I'm passionate about writing clean, maintainable code and working closely with cross-functional teams to deliver scalable, user-centered solutions. My experience includes leading small development teams, mentoring junior developers, and collaborating directly with both technical and non-technical stakeholders.",
-      p3a: "I'm currently expanding into ",
-      p3b: 'native mobile app development',
-      p3c: ' (Android/iOS), adding Swift and Kotlin to my toolkit.',
+      p3a: "I'm currently expanding my work into ",
+      p3b: 'local businesses',
+      p3c: ': websites, Odoo implementations, and digital marketing that helps their customers find them.',
     },
     experience: {
       eyebrow: 'Experience',
@@ -653,7 +657,11 @@ export const translations = {
       eyebrow: 'Skills',
       title: 'Technologies I work with',
       secondaryLabel: 'Also working with',
-      learningLabel: 'Getting started with native mobile development',
+      learningLabel: 'Expanding my work into local businesses',
+      learning: {
+        odoo: 'Odoo',
+        localMarketing: 'Digital marketing for local businesses',
+      },
       learningTag: 'Learning',
     },
     contact: {
