@@ -18,7 +18,7 @@ export const translations = {
     hero: {
       eyebrow: 'Full-Stack Developer',
       tagline:
-        'Construyo aplicaciones web y móviles escalables — de la interfaz a la nube — con Angular, Node.js, TypeScript y AWS. Más de 9 años convirtiendo requerimientos complejos en productos sólidos y fáciles de mantener.',
+        'Más de 9 años construyendo aplicaciones web y móviles con Angular, Node.js, TypeScript y la nube. Hoy también ayudo a negocios locales a tener su web, un sistema como Odoo y la presencia digital que les trae clientes.',
       ctaProjects: 'Ver proyectos',
       ctaContact: 'Hablemos',
       scroll: 'Scroll',
@@ -369,7 +369,7 @@ export const translations = {
     hero: {
       eyebrow: 'Full-Stack Developer',
       tagline:
-        'I build scalable web and mobile applications — from the interface to the cloud — with Angular, Node.js, TypeScript and AWS. Over 9 years turning complex requirements into solid, maintainable products.',
+        "Over 9 years building web and mobile applications with Angular, Node.js, TypeScript and the cloud. I also help local businesses get their website, a system like Odoo, and the online presence that brings in customers.",
       ctaProjects: 'View projects',
       ctaContact: "Let's talk",
       scroll: 'Scroll',
