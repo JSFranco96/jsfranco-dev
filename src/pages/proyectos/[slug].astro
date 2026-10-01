@@ -67,6 +67,28 @@ const key = `caseStudies.${project.slug}`;
           </dd>
         </div>
       </dl>
+
+      {
+        'team' in project && 'team' in cs && (
+          <div class="hero-in mt-10" style="--stagger: 5">
+            <p class="font-mono text-xs tracking-[0.2em] text-muted uppercase" data-i18n="caseStudies.teamLabel">{labels.teamLabel}</p>
+            <ul class="mt-4 grid gap-px border-2 border-border bg-border sm:grid-cols-3">
+              {project.team.map((member, i) => (
+                <li class="flex flex-col gap-1 bg-bg p-6">
+                  {'href' in member ? (
+                    <a href={member.href} target="_blank" rel="noopener noreferrer" class="link-sweep self-start text-lg font-bold text-text hover:text-accent">
+                      {member.name} ↗
+                    </a>
+                  ) : (
+                    <span class="text-lg font-bold text-text">{member.name}</span>
+                  )}
+                  <span class="text-muted" data-i18n={`${key}.team.${i}`}>{cs.team[i]}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
     </header>
 
     <div class="mx-auto max-w-6xl px-6 py-12 sm:py-16">

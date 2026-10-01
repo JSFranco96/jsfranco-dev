@@ -103,6 +103,7 @@ export const translations = {
       statusLabel: 'Estado',
       stackLabel: 'Stack',
       linksLabel: 'Enlaces',
+      teamLabel: 'Equipo',
       ctaTitle: '¿Tienes un proyecto parecido?',
       ctaText: 'Cuéntame qué necesitas y vemos juntos cómo resolverlo.',
       ctaButton: 'Hablemos',
@@ -177,6 +178,7 @@ export const translations = {
           'App móvil para ferias universitarias que funciona sin conexión: los estudiantes exploran instituciones, guardan favoritos, toman notas y ubican cada stand en el mapa del evento.',
         role: 'Desarrollé la app móvil, el pipeline del mapa y el landing, en un equipo con una diseñadora y un desarrollador backend.',
         status: 'En fase de pruebas, aún no publicada en las tiendas.',
+        team: ['Diseño UI/UX', 'Backend y API', 'App móvil, mapa y landing'],
         sections: [
           {
             heading: 'Contexto',
@@ -372,6 +374,7 @@ export const translations = {
       statusLabel: 'Status',
       stackLabel: 'Stack',
       linksLabel: 'Links',
+      teamLabel: 'Team',
       ctaTitle: 'Have a similar project?',
       ctaText: "Tell me what you need and we'll figure out how to solve it together.",
       ctaButton: "Let's talk",
@@ -446,6 +449,7 @@ export const translations = {
           'A mobile app for university fairs that works offline: students browse institutions, save favorites, take notes, and find every booth on the venue map.',
         role: 'I built the mobile app, the map pipeline, and the landing page, on a team with a designer and a backend developer.',
         status: 'In testing, not yet published in the app stores.',
+        team: ['UI/UX design', 'Backend and API', 'Mobile app, map, and landing page'],
         sections: [
           {
             heading: 'Context',

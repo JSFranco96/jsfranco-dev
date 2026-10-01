@@ -10,6 +10,12 @@ export const projects = [
     slug: 'ubicco',
     stack: ['Ionic', 'Angular', 'Capacitor', 'TypeScript', 'Firebase', 'Python', 'Astro'],
     links: [{ label: 'ubicco.app', href: 'https://www.ubicco.app' }],
+    // Roles are translated in caseStudies.ubicco.team, in the same order.
+    team: [
+      { name: 'Alison Méndez', href: 'https://www.linkedin.com/in/alimendezf/' },
+      { name: 'José González' },
+      { name: 'Javier Franco' },
+    ],
   },
 ] as const;
 
