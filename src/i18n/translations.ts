@@ -276,7 +276,7 @@ export const translations = {
               'Una imagen para compartir el enlace en WhatsApp y redes, y metadatos para buscadores.',
               'Datos estructurados (schema.org) para que Google entienda el negocio: tipo, dirección, contacto y catálogo de tratamientos.',
               'Una sección de testimonios lista para las reseñas reales, que aparece sola cuando se agrega la primera.',
-              'Un plan de 30 días: perfil de Google Maps, WhatsApp Business con catálogo y respuestas rápidas, un calendario de 8 reels y la meta de 10 reseñas.',
+              'Un plan de 30 días: perfil de Google Maps, WhatsApp Business con catálogo y respuestas rápidas, un calendario de 8 publicaciones sin necesidad de salir a cámara y la meta de 10 reseñas.',
             ],
           },
           {
@@ -627,7 +627,7 @@ export const translations = {
               'A share image for links on WhatsApp and social media, and search engine metadata.',
               "Structured data (schema.org) so Google understands the business: type, address, contact details, and treatment catalog.",
               'A testimonials section ready for real reviews, which appears on its own once the first one is added.',
-              'A 30-day plan: a Google Maps profile, WhatsApp Business with a catalog and quick replies, a calendar of 8 reels, and a goal of 10 reviews.',
+              'A 30-day plan: a Google Maps profile, WhatsApp Business with a catalog and quick replies, a calendar of 8 posts that don't require being on camera, and a goal of 10 reviews.',
             ],
           },
           {
