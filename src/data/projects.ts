@@ -19,7 +19,7 @@ export const projects = [
   },
   {
     slug: 'bellaglow',
-    stack: ['Astro', 'Tailwind CSS', 'TypeScript', 'schema.org', 'Vercel'],
+    stack: ['Figma', 'Python', 'Astro', 'Tailwind CSS', 'TypeScript', 'schema.org', 'Vercel'],
     links: [{ label: 'bellaglowstudio.lat', href: 'https://www.bellaglowstudio.lat' }],
   },
 ] as const;
