@@ -270,7 +270,7 @@ export const translations = {
             heading: 'Lo que construí',
             body: [],
             bullets: [
-              'Una reconstrucción del logo en vector a partir de la imagen original: rostro, monograma y nombre vectorizados con curvas suaves, hojas rehechas como formas geométricas y el círculo en arcos exactos. Pasó de miles de puntos irregulares a curvas limpias que se imprimen nítidas a cualquier tamaño.',
+              'Una reconstrucción del logo en vector a partir de la imagen original: rostro, monograma y nombre vectorizados con curvas suaves, hojas rehechas como formas geométricas y el marco como un óvalo medido, en dos trazos que se afinan en las puntas. Pasó de miles de puntos irregulares a curvas limpias que se imprimen nítidas a cualquier tamaño.',
               'Un sistema de diseño en Figma: variables de color con contraste verificado, estilos de texto, componentes (botón, etiqueta, campo y tarjeta de servicio), logo completo y monograma, tarjeta de presentación lista para imprenta con un QR vectorial y una plantilla de carrusel para Instagram.',
               'Una landing en Astro y Tailwind con servicios por categoría, presentación de la cosmetóloga, galería y agenda por WhatsApp con un mensaje ya escrito.',
               'Una imagen para compartir el enlace en WhatsApp y redes, y metadatos para buscadores.',
@@ -622,7 +622,7 @@ export const translations = {
             heading: 'What I built',
             body: [],
             bullets: [
-              'A vector rebuild of the logo from the original image: the face, monogram, and name traced into smooth curves, the leaves redrawn as geometric shapes, and the ring as exact arcs. It went from thousands of jagged points to clean curves that print sharp at any size.',
+              'A vector rebuild of the logo from the original image: the face, monogram, and name traced into smooth curves, the leaves redrawn as geometric shapes, and the frame as a measured oval in two strokes that taper at the ends. It went from thousands of jagged points to clean curves that print sharp at any size.',
               'A design system in Figma: color variables with checked contrast, text styles, components (button, tag, field, and service card), the full logo and monogram, a print-ready business card with a vector QR code, and an Instagram carousel template.',
               'An Astro and Tailwind landing page with services by category, an introduction to the cosmetologist, a gallery, and booking over WhatsApp with a prefilled message.',
               'A share image for links on WhatsApp and social media, and search engine metadata.',
